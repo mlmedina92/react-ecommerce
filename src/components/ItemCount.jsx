@@ -8,7 +8,7 @@
 //agrego useEffect para que cada vez q cambie el valor inciial por ej, se resetee y no haya q actualizarlo
 
 import React, {useState, useEffect} from 'react';
-import "./styles/itemCount.css";
+import "../scss/itemCount.scss";
 
 const ItemCount = ({initial, stock, onAdd}) => {//destructuring de props
     const [count, setCount] = useState(parseInt(initial));

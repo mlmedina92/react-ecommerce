@@ -1,6 +1,6 @@
 //COMPONENTE ITEM: es la CARD q se va a renderizar por c/u de los objetos que simulemos traer.
 
-import "./styles/item.css";
+import "../scss/item.scss";
 import { Link } from "react-router-dom";
 import React from "react";//importo hook que permite usar contextos
 

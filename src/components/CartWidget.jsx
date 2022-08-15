@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles/cartwidget.css";
 import { useCartContext } from "../context/CartContext";
 
 export const CartWidget = () => {
