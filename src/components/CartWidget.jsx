@@ -1,4 +1,5 @@
 import React from "react";
+import "../scss/CartWidget.scss"
 import { useCartContext } from "../context/CartContext";
 
 export const CartWidget = () => {
@@ -6,7 +7,7 @@ export const CartWidget = () => {
 
   return (
     <>    
-    <i className="bi bi-cart"></i> 
+    <i className="bi bi-cart iconCart"></i> 
     <span>{totalProducts() || ''}</span>
     </>
 

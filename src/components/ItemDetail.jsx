@@ -20,7 +20,7 @@ export const ItemDetail = ({data}) => {
   return (
     <div className='container'>
         <div className='detail'>
-            <img className='detail__img' src={data.img} alt="caca" />
+            <img className='detail__img' src={data.img} alt="foto" />
             <div className='content'>
                 <h1>{data.title}</h1>
                 {

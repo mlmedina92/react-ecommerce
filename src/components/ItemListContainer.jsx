@@ -34,7 +34,9 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <Title />
+      <Title title="Bienvenidos" subtitle="a mi Mundo Flotante" textDescription="Bienvenidos a una realidad imaginaria creada por Mundo Flotante.
+Siéntase libre de mirar a su alrededor. ¡Si tienes alguna pregunta solo ponte en contacto!
+¡Relájate y disfruta!"/>
       {/* le ordeno al contador q se puede mover pero dentro de un rango
     cdo alguien agregue agregar al carrito pasame el nro q el cliente clikeo pasame 3. para que me lo des te paso como prop un callback: una funcion q le paso por param para ejecutarla desp ahi adentro- vos me pasas un valor quantity y yo lo quiero imprimir en consola- cdo ejecute onAdd se tiene q ejecutar la funcion onAAd
    */}
