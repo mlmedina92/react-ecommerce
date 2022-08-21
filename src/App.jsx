@@ -23,13 +23,11 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/* en las distintas rutas va a renderizar distintos componenyes pero yo quiero q el navbar esste siempre no importa la ruta va por eso no pongo el navbar en una ruta sino fuera de routes. estas partes son dinamicamas y dependiendo de la ruta q escrib es lo q uiero q se renderice*/}
-        {/* si no usara context este value pablo q esta en app lo tendria q pasar por prop a itemliscontainer desp a itemlist y desp a item , asi te salteas 2 componentes  */}
+        {/* En las distintas rutas va a renderizar distintos componentes pero yo quiero que el navbar este siempre, no importa la ruta.Por eso no pongo el navbar en una ruta sino fuera de routes. Estas partes son dinamicas y dependiendo de la ruta q escriba es lo quiero q se renderice*/}
+        {/* si no usara context este value "pablo" q esta en app lo tendria q pasar por prop a itemliscontainer desp a itemlist y desp a item , asi te salteas 2 componentes  */}
         <CartProvider>
           <NavBar />
-          <section className="mb-5 inicio">
-        
-      </section>
+          <section className="mb-5 inicio"></section>
           <main className="container">
             <Routes>
               {/* creo las url, rutas dentro */}

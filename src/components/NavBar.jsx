@@ -12,10 +12,11 @@ const NavBar = () => {
        <nav className="navbar navbar-expand-lg bg-light bg-opacity-75">
          <div className= "container">
            <NavLink className="navbar-brand" to="/">
-             <img src={logo} alt="logo de la marca" width="209" height="60"/>
+             <img src={logo} alt="logo de la marca" width="60" height="60"/>
            </NavLink>
            {/* menu mobile */}
            <button className="navbar-toggler bg-light bg-opacity-75" type="button" data-bs-toggle="collapse" data-bs-target="#navbarId" aria-controls="navbarId" aria-expanded="false" aria-label="Toggle navigation"><i className="bi bi-list"></i></button>
+
            {/* Links menú pcipal */}
    
            <div className="collapse navbar-collapse justify-content-end text-uppercase" id="navbarId">
@@ -24,10 +25,10 @@ const NavBar = () => {
                  <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/'>Inicio</NavLink>
                </li>
                <li className="nav-item">
-                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/categoria/films'>films</NavLink>
+                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/categoria/films'>Cuadros</NavLink>
                </li>
                <li className="nav-item">
-                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/categoria/series'>series</NavLink>
+                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/categoria/series'>Murales</NavLink>
                </li>
                <li className="nav-item">
                  <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='cart'>
