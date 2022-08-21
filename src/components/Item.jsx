@@ -7,8 +7,9 @@ import React from "react";//importo hook que permite usar contextos
 const Item = ({ info }) => {
  
   //capturo info q es un objeto mapedo
+  //ITEM ES CADA CARD . cada card es clikeable, cuando toco me manda al detalle 
   return (
-    <Link to={`/detalle/${info.id}`} className="film">
+    <Link to={`/detalle/${info.id}`} className="card">
       <img src={info.image} alt="" />
       <p>{info.title}</p>
     </Link>

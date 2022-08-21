@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 
 
 
-// recibe inf de ItemDetailContainer
+// recibe inf de ItemDetailContainer y 
 
 export const ItemDetail = ({data}) => {
-  const [goToCart, setGoToCar] = useState(false);
+  const [goToCart, setGoToCart] = useState(false);
   const {addProduct} = useCartContext();
 
   const onAdd = (quantity) => {
-    setGoToCar(true);
+    setGoToCart(true);
     addProduct(data, quantity);
     }
   
@@ -25,7 +25,7 @@ export const ItemDetail = ({data}) => {
                 <h1>{data.title}</h1>
                 {
                   goToCart
-                  ?<Link to='cart'>Terminar compra</Link>
+                  ?<Link to='carrito'>Terminar compra</Link>
                   :<ItemCount initial={1} stock={5} onAdd={onAdd} />
 
                 }

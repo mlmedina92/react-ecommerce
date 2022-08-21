@@ -25,13 +25,16 @@ const NavBar = () => {
                  <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/'>Inicio</NavLink>
                </li>
                <li className="nav-item">
-                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/categoria/films'>Cuadros</NavLink>
+                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/categoria/cuadros'>Cuadros</NavLink>
                </li>
                <li className="nav-item">
-                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/categoria/series'>Murales</NavLink>
+                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/categoria/murales'>Murales</NavLink>
                </li>
                <li className="nav-item">
-                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='cart'>
+                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/contacto'>Contacto</NavLink>
+               </li>
+               <li className="nav-item">
+                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='carrito'>
                     <CartWidget />
                  </NavLink>
                </li>

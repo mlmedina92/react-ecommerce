@@ -7,7 +7,6 @@
 
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-import Title from "./Title";
 import { useParams } from "react-router-dom"; //para filtrar , para escuchar los parametros de la url
 import {  getFirestore, collection, getDocs, query, where } from "firebase/firestore";
 
@@ -27,16 +26,13 @@ const ItemListContainer = () => {
             .then(res => setData(res.docs.map(product => ({id : product.id, ...product.data()}))))
        } else {
         getDocs(queryCollection)
-        .then(res => setData(res.docs.map(product => ({id:product.id, ...product.data}))))
+        .then(res => setData(res.docs.map(product => ({id:product.id, ...product.data()}))))
       //antes de setear data hay q ver si se pasa un param por la url sino hay ningun paramtero es pq estoy en el home ahi si se tiene q setear, lo primero es usar ese parametro para ver si existe
    }
   }, [categoriaId]); //  cada vez q la categoria cambia quiero que vuelva a hacer el useefect para q vuelva a hacer el pedido y se fije si existe la categoriaId y si cambio que me lo filtre de nuevo
 
   return (
     <>
-      <Title title="Bienvenidos" subtitle="a mi Mundo Flotante" textDescription="Bienvenidos a una realidad imaginaria creada por Mundo Flotante.
-Siéntase libre de mirar a su alrededor. ¡Si tienes alguna pregunta solo ponte en contacto!
-¡Relájate y disfruta!"/>
       {/* le ordeno al contador q se puede mover pero dentro de un rango
     cdo alguien agregue agregar al carrito pasame el nro q el cliente clikeo pasame 3. para que me lo des te paso como prop un callback: una funcion q le paso por param para ejecutarla desp ahi adentro- vos me pasas un valor quantity y yo lo quiero imprimir en consola- cdo ejecute onAdd se tiene q ejecutar la funcion onAAd
    */}

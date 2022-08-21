@@ -15,7 +15,7 @@ const Cart = () => {
       </>
     );
   }
-
+// esto es el else:
   return (
     <>
       {cart.map((product) => (
