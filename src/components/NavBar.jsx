@@ -34,6 +34,9 @@ const NavBar = () => {
                  <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/contacto'>Contacto</NavLink>
                </li>
                <li className="nav-item">
+                 <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='/sobre-mi'>Sobre mi</NavLink>
+               </li>
+               <li className="nav-item">
                  <NavLink className={navLinkClassName} activeclassname={navLinkClassNameActive} to='carrito'>
                     <CartWidget />
                  </NavLink>

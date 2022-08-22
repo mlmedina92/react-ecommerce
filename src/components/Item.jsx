@@ -12,7 +12,7 @@ const Item = ({ info }) => {
     <Link to={`/detalle/${info.id}`} className="card">
       <img src={info.image} alt="" />
       <p>{info.title}</p>
-    </Link>
+     </Link>
   );
 }
 

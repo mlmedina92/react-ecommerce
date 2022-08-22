@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../scss/title.scss";
 // capturo las propidades con un OBJETO llamado PROPS- props en un objeto que tiene las prop que le defino y los valores que le paso a ese comp cuando lo llamo.
 //OPCION 1 USO PROPS PARA RECIBIR VALORES
 // en vez de escribir objeto props.nombredelcampo escribo directo el nombre del campo desestructuracion
@@ -18,9 +18,9 @@ import React from "react";
 const Title = ({title,subtitle,textDescription}) => {
   return (
     <>
-      <h1>{title}</h1>
-      <h2>{subtitle}</h2>
-      <p>{textDescription}</p>
+      <h1 className="texto-header">{title}</h1>
+      <h2 className="texto-header">{subtitle}</h2>
+      <p className="texto-header">{textDescription}</p>
     </>
   );
 };

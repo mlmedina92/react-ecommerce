@@ -11,6 +11,7 @@ import Copyright from "./components/Copyright";
 import FooterLinks from "./components/FooterLinks";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
+import Bio from "./components/Bio";
 
 //importo BrowserRouter: creo el ambito donde poder utilizar react-router-dom ( ese ambito es el elemento BrowserRouter q va a proveer de todas las funcionalidad a sus hijos)
 //creo las rutas, los endpoints que se usan dentro del elemento routes y cada ruta es un roote q va a tener 2 props una la ruta, como vas a llamarla(path) y la otra qué elemento queres renderizar(element).
@@ -42,6 +43,8 @@ function App() {
               />
               <Route path="/carrito" element={<Cart />} />
               <Route path="/contacto" element={<Contact />} />
+              <Route path="/sobre-mi" element={<Bio />} />
+
             </Routes>
           </main>
         </CartProvider>
