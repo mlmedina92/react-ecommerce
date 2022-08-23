@@ -1,4 +1,3 @@
-import '../scss/itemDetail.scss';
 import React, {useState} from 'react';
 import { useCartContext } from '../context/CartContext';
 import ItemCount from './ItemCount';
@@ -6,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
-// recibe inf de ItemDetailContainer y 
+// recibe inf de ItemDetailcontainer-fluid y 
 
 export const ItemDetail = ({data}) => {
   const [goToCart, setGoToCart] = useState(false);
@@ -18,14 +17,16 @@ export const ItemDetail = ({data}) => {
     }
   
   return (
-    <div className='container'>
-        <div className='detail'>
-            <img className='detail__img' src={data.img} alt="foto" />
-            <div className='content'>
-                <h1>{data.title}</h1>
+    <div className='container-fluid'>
+        <div className='card'>
+            <img className='card-img-top' src={data.image} alt="foto" />
+            <div className='card-body'>
+                <h4 className="card-title">{data.title}</h4>
+                <p className="card-text"><strong>Descripcion: </strong>{data.descripcion}</p>
+                <p className="card-text"><strong>Precio $: </strong>{data.price}</p>
                 {
                   goToCart
-                  ?<Link to='carrito'>Terminar compra</Link>
+                  ?<Link to='carrito' className="btn btn-primary">Terminar compra</Link>
                   :<ItemCount initial={1} stock={5} onAdd={onAdd} />
 
                 }

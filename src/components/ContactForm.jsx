@@ -34,8 +34,7 @@ const ContactForm = () => {
           <div className="col-12">
             <form ref={form} onSubmit={formSubmit}>
               <legend className="fs-6 mb-3">
-                Completá con tus datos y un asesor te contactará a la brevedad.
-              </legend>
+              Gracias por su interés en el trabajo de Mundo Flotante. Complete el formulario y nos pondremos en contacto. </legend>
               <div className="mb-3">
                 <label className="form-label" for="name">
                   Nombre:

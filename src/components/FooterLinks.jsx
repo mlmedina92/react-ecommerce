@@ -5,27 +5,52 @@ import logo from "../img/logo.png";
 const FooterLinks = () => {
     return (
       <div className="pt-4 px-20 py-4">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
-            {/* <div className="d-none d-sm-block col-12 col-md-3">
-              <NavLink className="text-decoration-none" to="./">
+            <div className="d-none d-sm-block col-12 col-md-3">
+              {/* <NavLink className="text-decoration-none" to="/">
                 <img
                   src={logo}
                   alt="Ecomerce"
                   width="100"
                   height="30"
                 />
-              </NavLink>
+              </NavLink> */}
             </div>
             <div className="col-12 col-md-3 mb-3">
               <ul className="list-unstyled">
-                <li className="pb-2">
-                  <NavLink className="text-decoration-none" to="./">
+                {/* <li className="pb-2">
+                  <NavLink className="text-decoration-none" to="/">
                     Inicio
                   </NavLink>
                 </li>
+                <li className="pb-2">
+                  <NavLink className="text-decoration-none" to="/categoria/cuadros">
+                    Cuadros
+                  </NavLink>
+                </li>
+                <li className="pb-2">
+                  <NavLink className="text-decoration-none" to="/categoria/murales">
+                    Murales
+                  </NavLink>
+                </li>
+                <li className="pb-2">
+                  <NavLink className="text-decoration-none" to="/categoria/contacto">
+                    Contacto
+                  </NavLink>
+                </li>
+                <li className="pb-2">
+                  <NavLink className="text-decoration-none" to="/categoria/sobre-mi">
+                    Contacto
+                  </NavLink>
+                </li>
+                <li className="pb-2">
+                  <NavLink className="text-decoration-none" to="/categoria/carrito">
+                    Carrito
+                  </NavLink>
+                </li> */}
               </ul>
-            </div> */}
+            </div>
             <div className="col-12 col-md-3 mb-3">
               <ul className="list-unstyled">
                 <li className="mb-2">

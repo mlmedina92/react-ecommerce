@@ -10,7 +10,7 @@ const Item = ({ info }) => {
   //ITEM ES CADA CARD . cada card es clikeable, cuando toco me manda al detalle 
   return (
     <Link to={`/detalle/${info.id}`} className="card">
-      <img src={info.image} alt="" />
+      <img src={info.image} alt="hola" />
       <p>{info.title}</p>
      </Link>
   );

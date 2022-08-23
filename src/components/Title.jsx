@@ -13,9 +13,8 @@ import "../scss/title.scss";
 //   );
 // };
 
-
 //OPCION 2 DESESTRUCTURO PROPS PARA RECIBIR VALORES:
-const Title = ({title,subtitle,textDescription}) => {
+const Title = ({ title, subtitle, textDescription }) => {
   return (
     <>
       <h1 className="texto-header">{title}</h1>

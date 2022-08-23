@@ -1,5 +1,4 @@
 import React from "react";
-import Bio from "./Bio";
 import ContactForm from "./ContactForm";
 import ItemListContainer from "./ItemListContainer";
 import Title from "./Title";
@@ -18,8 +17,7 @@ Siéntase libre de mirar a su alrededor. ¡Si tienes alguna pregunta solo ponte 
         />
 
       </section>
-
-      <ItemListContainer />
+      <ItemListContainer  />
 
       <ContactForm />
     </>
