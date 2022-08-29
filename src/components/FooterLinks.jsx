@@ -5,7 +5,7 @@ import logo from "../img/logo.png";
 const FooterLinks = () => {
     return (
       <div className="pt-4 px-20 py-4">
-        <div className="container-fluid">
+        <div className="container">
           <div className="row">
             <div className="d-none d-sm-block col-12 col-md-3">
               <NavLink className="text-decoration-none" to="/">

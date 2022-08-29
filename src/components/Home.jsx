@@ -6,7 +6,7 @@ import "../scss/title.scss"
 
 const Home = () => {
   return (
-    <>
+    <div className="container">
       <section className="container mb-5 inicio">
         {/* le paso datos por props a Title */}
         <div className="vh-100 titulo text-center">
@@ -19,13 +19,11 @@ Siéntase libre de mirar a su alrededor. ¡Si tienes alguna pregunta solo ponte 
         />
         </div>
       </section>
-      <section className="mb-5">
+      <section className="container mb-5">
         <ItemListContainer />
-
       </section>
-
       <ContactForm />
-    </>
+    </div>
   );
 };
 

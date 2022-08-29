@@ -9,19 +9,42 @@ const Item = ({ info }) => {
   //capturo info q es un objeto mapedo
   //ITEM ES CADA CARD . cada card es clikeable, cuando toco me manda al detalle 
   return (
-    <div className="card border rounded" >
-    <img src={info.image} className="card-img-top img-fluid" alt="obra de arte"/>
-    <div className="card-body">
-      <h5 className="card-title">{info.title}</h5>
-      <p className="card-text d-flex justify-content-between"> {info.descripcion}</p>
-      <div className="card-footer p-3">
-      <Link to={`/detalle/${info.id}`} classNameName="btn btn-primary">ver detalles</Link>
-   </div>
+<div className="card mb-5" >
+  <div className="row">
+    <div className="col-md-7">
+      <img src={info.image} className="w-100 vh-80 img-fluid rounded-start" alt="..."/>
+    </div>
+    <div className="col-md-5">
+      <div className="card-body">
+        <h5 className="card-title">{info.title}</h5>
+        <p className="card-text">{info.descripcion}</p>
+        <button><Link to={`/detalle/${info.id}`} className="btn btn-primary">Ver detalles</Link></button>
+      </div>
     </div>
   </div>
+</div>
+    
+/* <div classNameNameName="card" >
+  <div classNameName="row g-0"
+    <div classNameName="col-md-4">
+      <img src={info.image} classNameNameName="img-fluid rounded-start" alt="obra de arte"/>
+    </div>
+    <div classNameNameName="col-md-8">
+      <div className="card-body">
+            <h5 classNameNameName="card-title">{info.title}</h5>
+            <p classNameName="card-tect">Lorem ipsum dolor sit amet.</p>
+            <Link to={`/detalle/${info.id}`} classNameNameNameName="btn btn-primary">Ver detalles</Link>
+      </div>
+    </div>
+  </div> */
+    
   
-
   );
 }
+
+    
+
+
+
 
 export default Item;
