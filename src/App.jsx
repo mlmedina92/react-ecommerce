@@ -27,14 +27,14 @@ function App() {
         {/* En las distintas rutas va a renderizar distintos componentes pero yo quiero que el navbar este siempre, no importa la ruta.Por eso no pongo el navbar en una ruta sino fuera de routes. Esas partes son dinamicas y dependiendo de la ruta q escriba es lo quiero q se renderice*/}
         {/* si no usara context este value "pablo" q esta en app lo tendria q pasar por prop a itemliscontainer-fluid desp a itemlist y desp a item , asi te salteas 2 componentes  */}
         <CartProvider>
-          <header className="sticky-top">
+          <header className="container-fluid sticky-top">
             <NavBar />
           </header>
           <main className="container-fluid">
             <Routes>
-              {/* creo las url, rutas dentro */}
+              {/* adentro creo las url, rutas */}
               <Route path="/" element={<Home />} />
-              {/* ruta dinnamica: lo q va desp de dos puntos es una variable, es algo dinamico */}
+              {/* ruta dinnamica: lo q va desp de dos puntos es una variable, algo dinamico */}
               <Route
                 path="/categoria/:categoriaId"
                 element={<ItemListcontainer />}
@@ -49,11 +49,11 @@ function App() {
             </Routes>
           </main>
         </CartProvider>
-      </BrowserRouter>
       <footer>
         <FooterLinks />
       </footer>
       <Copyright />
+      </BrowserRouter>
     </>
   );
 }

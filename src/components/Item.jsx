@@ -9,10 +9,18 @@ const Item = ({ info }) => {
   //capturo info q es un objeto mapedo
   //ITEM ES CADA CARD . cada card es clikeable, cuando toco me manda al detalle 
   return (
-    <Link to={`/detalle/${info.id}`} className="card">
-      <img src={info.image} alt="hola" />
-      <p>{info.title}</p>
-     </Link>
+    <div className="card border rounded" >
+    <img src={info.image} className="card-img-top img-fluid" alt="obra de arte"/>
+    <div className="card-body">
+      <h5 className="card-title">{info.title}</h5>
+      <p className="card-text d-flex justify-content-between"> {info.descripcion}</p>
+      <div className="card-footer p-3">
+      <Link to={`/detalle/${info.id}`} classNameName="btn btn-primary">ver detalles</Link>
+   </div>
+    </div>
+  </div>
+  
+
   );
 }
 

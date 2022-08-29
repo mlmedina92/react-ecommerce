@@ -10,7 +10,7 @@ const NavBar = () => {
 
   return (
     <nav className="navbar navbar-expand-lg bg-light bg-opacity-75">
-      <div className="container-fluid">
+      <div className="container">
         <NavLink className="navbar-brand" to="/">
           <img src={logo} alt="logo de la marca" width="60" height="60" />
         </NavLink>
@@ -83,10 +83,8 @@ const NavBar = () => {
               <NavLink
                 className={navLinkClassName}
                 activeclassname={navLinkClassNameActive}
-                to="carrito"
-              >
-                <CartWidget />
-              </NavLink>
+                to="/carrito"
+              ><CartWidget/>              </NavLink>
             </li>
           </ul>
         </div>

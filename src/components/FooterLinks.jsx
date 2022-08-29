@@ -8,18 +8,18 @@ const FooterLinks = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="d-none d-sm-block col-12 col-md-3">
-              {/* <NavLink className="text-decoration-none" to="/">
+              <NavLink className="text-decoration-none" to="/">
                 <img
                   src={logo}
                   alt="Ecomerce"
                   width="100"
                   height="30"
                 />
-              </NavLink> */}
+              </NavLink>
             </div>
             <div className="col-12 col-md-3 mb-3">
               <ul className="list-unstyled">
-                {/* <li className="pb-2">
+                <li className="pb-2">
                   <NavLink className="text-decoration-none" to="/">
                     Inicio
                   </NavLink>
@@ -35,20 +35,15 @@ const FooterLinks = () => {
                   </NavLink>
                 </li>
                 <li className="pb-2">
-                  <NavLink className="text-decoration-none" to="/categoria/contacto">
+                  <NavLink className="text-decoration-none" to="/contacto">
                     Contacto
                   </NavLink>
                 </li>
                 <li className="pb-2">
-                  <NavLink className="text-decoration-none" to="/categoria/sobre-mi">
-                    Contacto
+                  <NavLink className="text-decoration-none" to="/sobre-mi">
+                    Sobre mi
                   </NavLink>
                 </li>
-                <li className="pb-2">
-                  <NavLink className="text-decoration-none" to="/categoria/carrito">
-                    Carrito
-                  </NavLink>
-                </li> */}
               </ul>
             </div>
             <div className="col-12 col-md-3 mb-3">
@@ -104,12 +99,12 @@ const FooterLinks = () => {
               </ul>
             </div>
             <div className="col-12 col-md-3">
-              <p className="texto-footer">Seguinos en las redes</p>
+              <p className="texto-footer">CONOCÉ MIS REDES</p>
               <ul className="list-unstyled d-inline-flex">
                 <li className="me-3">
                   <a
                     className="text-decoration-none fs-5"
-                    href="https://www.facebook.com/juan.gamalero.7"
+                    href="https://www.facebook.com/paula.pipo"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -119,7 +114,7 @@ const FooterLinks = () => {
                 <li className="me-3">
                   <a
                     className="text-decoration-none fs-5"
-                    href="https://www.instagram.com/inmobiliariagamalero/"
+                    href="https://www.instagram.com/mundo.flotante/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -130,7 +125,7 @@ const FooterLinks = () => {
                   <a
                     className="text-decoration-none fs-5"
                     target="_blank"
-                    href="mailto:inmobiliariagamalero@gmail.com"
+                    href="mailto:paulettepipo.illustration@gmail.com"
                     rel="noopener noreferrer"
                     title="E-mail"
                   >

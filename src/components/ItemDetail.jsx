@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
-// recibe inf de ItemDetailcontainer-fluid y 
+// recibe inf de ItemDetailcontainer
 
 export const ItemDetail = ({data}) => {
   const [goToCart, setGoToCart] = useState(false);
@@ -17,7 +17,7 @@ export const ItemDetail = ({data}) => {
     }
   
   return (
-    <div className='container-fluid'>
+    <div className='container'>
         <div className='card'>
             <img className='card-img-top' src={data.image} alt="foto" />
             <div className='card-body'>

@@ -14,11 +14,11 @@ export const ItemDetailContainer = () => {
       const querydb = getFirestore();//traigo firestore
       const queryDoc = doc(querydb, 'productos', detalleId);
       getDoc(queryDoc)//creo promesa
-      .then(res => setData({id: res.id, ...res.data()}))//como la prom se resolvi bien , cargo el data conn el setdata, data pasa de tener guardado un {} a tener el obj film, cdo esto sucede se tiene que re renderizar pq data cambio 
+      .then(res => setData({id: res.id, ...res.data()}))//como la prom se resolvio bien , cargo el data conn el setdata, data pasa de tener guardado un {} a tener el obj entero, cdo esto sucede se tiene que re renderizar pq data cambio 
     }, [detalleId]);
     
   return (
-    <ItemDetail  data ={data}/> //le mando la inf del objeto al  itemdetail
+    <ItemDetail data ={data}/> //le mando la inf del objeto al  itemdetail
   );
 }
 
