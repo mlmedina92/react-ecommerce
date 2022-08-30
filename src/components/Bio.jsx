@@ -1,5 +1,4 @@
 import React from 'react'
-import portada from "../img/portada.jpg"
 import "../scss/bio.scss"
 
 const Bio = () => {
@@ -23,7 +22,7 @@ const Bio = () => {
     
           </div>
           <div className="col-12 col-md-6">
-            <img className="w-100" src={portada} alt="Mundo Flotante" />
+            <img className="w-100" src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1661886084/mundoFlotante/si_oe6nzq.jpg" alt="Mundo Flotante" />
           </div>
         </div>
       </section>

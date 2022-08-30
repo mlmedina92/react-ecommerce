@@ -11,10 +11,10 @@ const Item = ({ info }) => {
   return (
 <div className="card mb-5" >
   <div className="row">
-    <div className="col-md-7">
-      <img src={info.image} className="w-100 vh-80 img-fluid rounded-start" alt="..."/>
+    <div className="col-md-7 pe-0">
+      <img src={info.image} className="img-card w-100 vh-80 img-fluid rounded-start" alt={info.price}/>
     </div>
-    <div className="col-md-5">
+    <div className="col-md-5 card-color">
       <div className="card-body">
         <h5 className="card-title">{info.title}</h5>
         <p className="card-text">{info.descripcion}</p>

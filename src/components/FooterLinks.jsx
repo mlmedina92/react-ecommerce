@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../img/logo.png";
+import logo from "../img/logo.jpeg";
 
 const FooterLinks = () => {
     return (
@@ -12,8 +12,8 @@ const FooterLinks = () => {
                 <img
                   src={logo}
                   alt="Ecomerce"
-                  width="100"
-                  height="30"
+                  width="200"
+                  height="200"
                 />
               </NavLink>
             </div>
@@ -31,7 +31,7 @@ const FooterLinks = () => {
                 </li>
                 <li className="pb-2">
                   <NavLink className="text-decoration-none" to="/categoria/murales">
-                    Murales
+                    Ilustraciones
                   </NavLink>
                 </li>
                 <li className="pb-2">

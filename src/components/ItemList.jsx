@@ -6,6 +6,8 @@ import Item from './Item';
 //capturo el data q me pasa ilemlistcontainer, lo inicializo en [], me llaga un array de objetos y por cada objeto genero un item con su key y le mando ese objeto q tiene toda la inf.
 const ItemList = ({data = []}) => {
   return (
+    <>
+    <h4 className="text-center mb-5">Conoce algunas de sus obras de arte</h4>
     <div className="row">
       {data.map((item) => {
         return (
@@ -15,8 +17,8 @@ const ItemList = ({data = []}) => {
         </div>
         )
       })}
-      
     </div>
+    </>
   )
 }
 

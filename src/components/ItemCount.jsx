@@ -28,15 +28,15 @@ const ItemCount = ({initial, stock, onAdd}) => {//destructuring de props
     
 
   return (
-<div className="container p-0 text-center">
+<div className="p-0 text-center">
     <div className="row counter">        
-        <button disabled={count <=1 } onClick={decrease} className="btn btn-primary col-2">-</button>
-        <span className="col-3">{count}</span>
-        <button disabled={count >= stock} onClick={increase} className="btn btn-primary col-2">+</button>
+        <button disabled={count <=1 } onClick={decrease} className="btn btn-primary col-1">-</button>
+        <span className="col-1">{count}</span>
+        <button disabled={count >= stock} onClick={increase} className="btn btn-primary col-1">+</button>
       
           {/* si el stok es 0 o menos boton desactivado */}
           {/* si le hago clik ejecuctar esta func anonima llamo a otra funcion q es onadd pero le paso como argumento el valor del count(que seria quantity en la declaracion de la funcion ) por ej 4 on add esta declarada en el padre ItemListContainer y recien ahi la ejecuta -- cuando hagan click en agregar el carrito lo unico q hace es pasarle al padre el valor nada mas*/}
-        <button disabled={stock <=0} onClick={() =>onAdd(count)} className="btn btn-primary col-5">Agregar al carrito</button>
+        <button disabled={stock <=0} onClick={() =>onAdd(count)} className="btn btn-primary ms-3 col-3">Agregar al carrito</button>
       </div>
 </div>
   )

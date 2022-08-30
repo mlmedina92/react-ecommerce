@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../img/logo.png";
+import logo from "../img/logo.jpeg";
 import CartWidget from "./CartWidget";
 
 const NavBar = () => {
@@ -12,7 +12,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-light bg-opacity-75">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
-          <img src={logo} alt="logo de la marca" width="60" height="60" />
+          <img src={logo} alt="logo de mundo flotante" width="100" height="100" />
         </NavLink>
         {/* menu mobile */}
         <button
@@ -58,7 +58,7 @@ const NavBar = () => {
                 activeclassname={navLinkClassNameActive}
                 to="/categoria/murales"
               >
-                Murales
+                Ilustraciones
               </NavLink>
             </li>
             <li className="nav-item">

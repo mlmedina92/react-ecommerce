@@ -19,11 +19,10 @@ export const ItemDetail = ({data}) => {
   return (
     <div className='container'>
         <div className='card'>
-            <img className='card-img-top' src={data.image} alt="foto" />
+            <img className='card-img-top' src={data.image} alt="obra de arte" />
             <div className='card-body'>
                 <h4 className="card-title">{data.title}</h4>
-                <p className="card-text"><strong>Descripcion: </strong>{data.descripcion}</p>
-                <p className="card-text"><strong>Precio $: </strong>{data.price}</p>
+                <p className="card-text"><strong>$: </strong>{data.price}</p>
                 {
                   goToCart
                   ?<Link to='carrito' className="btn btn-primary">Terminar compra</Link>

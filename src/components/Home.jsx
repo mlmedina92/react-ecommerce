@@ -14,12 +14,14 @@ const Home = () => {
           title="Bienvenidos"
           subtitle="a mi Mundo Flotante"
           textDescription="Bienvenidos a una realidad imaginaria creada por Mundo Flotante.
-Siéntase libre de mirar a su alrededor. ¡Si tienes alguna pregunta solo ponte en contacto!
-¡Relájate y disfruta!"
+Siéntase libre de mirar a su alrededor."
         />
         </div>
       </section>
       <section className="container mb-5">
+        <>
+        <h4 className="text-center text-uppercase mb-5">¡Relájate y disfruta!</h4>
+        </>
         <ItemListContainer />
       </section>
       <ContactForm />
