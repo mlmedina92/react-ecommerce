@@ -87,7 +87,7 @@ const ContactForm = () => {
                 ></textarea>
               </div>
               <div className="mb-3">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="rounded-pill btn btn-primary">
                   Enviar
                 </button>
               </div>
