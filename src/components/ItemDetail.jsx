@@ -23,9 +23,11 @@ export const ItemDetail = ({data}) => {
             <div className='card-body'>
                 <h4 className="card-title">{data.title}</h4>
                 <p className="card-text"><strong>$: </strong>{data.price}</p>
+                <button><Link to={'/'} className="rounded-pill btn btn-primary">Volver atrás</Link></button>
+
                 {
                   goToCart
-                  ?<Link to='/carrito' className="btn btn-primary">Terminar compra</Link>
+                  ?<Link to='/carrito' className="rounded-pill btn btn-primary">Terminar compra</Link>
                   :<ItemCount initial={1} stock={5} onAdd={onAdd} />
 
                 }

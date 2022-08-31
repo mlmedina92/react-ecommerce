@@ -8,6 +8,7 @@
 //agrego useEffect para que cada vez q cambie el valor inciial por ej, se resetee y no haya q actualizarlo
 
 import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import "../scss/itemCount.scss";
 
 const ItemCount = ({initial, stock, onAdd}) => {//destructuring de props
@@ -37,6 +38,7 @@ const ItemCount = ({initial, stock, onAdd}) => {//destructuring de props
           {/* si el stok es 0 o menos boton desactivado */}
           {/* si le hago clik ejecuctar esta func anonima llamo a otra funcion q es onadd pero le paso como argumento el valor del count(que seria quantity en la declaracion de la funcion ) por ej 4 on add esta declarada en el padre ItemListContainer y recien ahi la ejecuta -- cuando hagan click en agregar el carrito lo unico q hace es pasarle al padre el valor nada mas*/}
         <button disabled={stock <=0} onClick={() =>onAdd(count)} className="rounded-pill btn btn-primary ms-3 col-3">Agregar al carrito</button>
+
       </div>
 </div>
   )

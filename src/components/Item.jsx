@@ -19,7 +19,7 @@ const Item = ({ info }) => {
         <h5 className="card-title">{info.title}</h5>
         <p className="card-text">{info.descripcion}</p>
         <button><Link to={`/detalle/${info.id}`} className="rounded-pill btn btn-primary">Ver detalles</Link></button>
-      </div>
+     </div>
     </div>
   </div>
 </div>

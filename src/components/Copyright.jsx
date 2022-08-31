@@ -3,7 +3,7 @@ import '../scss/copyright.scss'
 
 const Copyright = () => {
   return (
-    <div className="container-fluid copyright px-2 py-3">
+    <div className="copy container-fluid copyright px-2 py-3">
       <div className="container-fluid">
         <p className="text-center mb-0">
           Copyright © | Todos los derechos reservados 2022. Mundo Flotante . Tandil |{" "}

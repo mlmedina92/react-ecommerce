@@ -10,8 +10,8 @@ const Cart = () => {
     return (
       //return condicional
       <>
-        <p>No hay elementos en el carrito</p>
-        <Link to="/">hacer compras</Link>
+        <p>Aún no agregaste elementos en el carrito</p>
+        <Link to="/"><button className="rounded-pill btn btn-primary">Ir a hacer compras</button></Link>
       </>
     );
   }

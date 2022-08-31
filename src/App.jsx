@@ -1,4 +1,5 @@
 import "./scss/inicio.scss";
+import "./scss/footer.scss";
 import "./scss/app.scss";
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -49,7 +50,7 @@ function App() {
             </Routes>
           </main>
         </CartProvider>
-      <footer>
+      <footer className="footer">
         <FooterLinks />
       </footer>
       <Copyright />
