@@ -50,10 +50,10 @@ function App() {
             </Routes>
           </main>
         </CartProvider>
-      <footer className="footer">
-        <FooterLinks />
-      </footer>
-      <Copyright />
+        <footer className="footer">
+          <FooterLinks />
+        </footer>
+        <Copyright />
       </BrowserRouter>
     </>
   );

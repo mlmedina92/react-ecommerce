@@ -1,6 +1,6 @@
 import React from "react";
 import ContactForm from "./ContactForm";
-import "../scss/contact.scss"
+import "../scss/contact.scss";
 
 const Contact = () => {
   return (

@@ -4,7 +4,7 @@ import logo from "../img/logo.jpeg";
 import CartWidget from "./CartWidget";
 
 const NavBar = () => {
-  //funcion para aplicar las clases nativas de react router dom para links activos
+  //Función para aplicar las clases nativas de react router dom para links activos
   const navLinkClassName = "nav-link";
   const navLinkClassNameActive = "nav-link active";
 
@@ -12,7 +12,12 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-light bg-opacity-75">
       <div className="container">
         <NavLink className="navbar-brand" to="/">
-          <img src={logo} alt="logo de mundo flotante" width="100" height="100" />
+          <img
+            src={logo}
+            alt="logo de mundo flotante"
+            width="100"
+            height="100"
+          />
         </NavLink>
         {/* menu mobile */}
         <button
@@ -84,7 +89,9 @@ const NavBar = () => {
                 className={navLinkClassName}
                 activeclassname={navLinkClassNameActive}
                 to="/carrito"
-              ><CartWidget/>              </NavLink>
+              >
+                <CartWidget />{" "}
+              </NavLink>
             </li>
           </ul>
         </div>

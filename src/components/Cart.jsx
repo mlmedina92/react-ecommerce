@@ -7,15 +7,19 @@ const Cart = () => {
   const { cart, totalPrice } = useCartContext();
 
   if (cart.length === 0) {
-    return (
-      //return condicional
+    return ( //return condicional (IF)
+      
       <>
         <p>Aún no agregaste elementos en el carrito</p>
-        <Link to="/"><button className="rounded-pill btn btn-primary">Ir a hacer compras</button></Link>
+        <Link to="/">
+          <button className="rounded-pill btn btn-primary">
+            Ir a hacer compras
+          </button>
+        </Link>
       </>
     );
   }
-// esto es el else:
+  //return condicional (else)
   return (
     <>
       {cart.map((product) => (

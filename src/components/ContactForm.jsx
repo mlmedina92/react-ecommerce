@@ -2,7 +2,7 @@ import React from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-// to do : configurar form de contacto para el mail de MF
+// to do: configurar form de contacto para el mail de MF
 
 const ContactForm = () => {
   const form = useRef();
@@ -34,7 +34,9 @@ const ContactForm = () => {
           <div className="col-12">
             <form ref={form} onSubmit={formSubmit}>
               <legend className="fs-6 mb-3">
-              Gracias por su interés en el trabajo de Mundo Flotante. Complete el formulario y nos pondremos en contacto. </legend>
+                Gracias por su interés en el trabajo de Mundo Flotante. Complete
+                el formulario y nos pondremos en contacto.{" "}
+              </legend>
               <div className="mb-3">
                 <label className="form-label" for="name">
                   Nombre:
