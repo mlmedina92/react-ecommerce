@@ -1,7 +1,7 @@
 //Necesitamos pedir todos los datos de productos, cargarlos y mandarselos a ItemList. Maneja la logica (es un contenedor).
 
 import React, { useState, useEffect } from "react";
-import ItemList from "./ItemList";
+import ItemList from "../components/ItemList";
 import { useParams } from "react-router-dom";//Para filtrar,escuchar los parametros de la url.
 import {
   getFirestore,

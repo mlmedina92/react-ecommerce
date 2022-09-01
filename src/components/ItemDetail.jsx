@@ -4,7 +4,7 @@ import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import "../scss/itemDetail.scss";
 
-//Recibe inf de ItemDetailcontainer
+//Recibe data de ItemDetailcontainer.
 export const ItemDetail = ({ data }) => {
   const [goToCart, setGoToCart] = useState(false);
   const { addProduct } = useCartContext();

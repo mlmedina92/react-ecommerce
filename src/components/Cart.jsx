@@ -19,8 +19,8 @@ const Cart = () => {
       </>
     );
   }
-  //return condicional (else)
-  return (
+  
+  return ( //return condicional (else)
     <>
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />

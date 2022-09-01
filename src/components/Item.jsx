@@ -1,4 +1,4 @@
-//Item: es la CARD q se va a renderizar por c/u de los objetos. Cada card es clikeable, cuando toco me manda al detalle.
+//Item: card que se renderiza por c/ objeto. Cada card es clikeable, cuando toco me manda al detalle.
 
 import "../scss/item.scss";
 import { Link } from "react-router-dom";
