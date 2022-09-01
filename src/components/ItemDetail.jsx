@@ -18,7 +18,7 @@ export const ItemDetail = ({ data }) => {
     <div className="container mb-5">
       <div className="card">
         <img
-          className="card-img-top imageDetail"
+          className="card-img-top image-detail"
           src={data.image}
           alt={data.title}
         />

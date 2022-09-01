@@ -38,55 +38,55 @@ const ContactForm = () => {
                 el formulario y nos pondremos en contacto.{" "}
               </legend>
               <div className="mb-3">
-                <label className="form-label" for="name">
+                <label className="form-label">
                   Nombre:
+                  <input
+                    className="form-control required"
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Ingrese su nombre"
+                    required
+                  />
                 </label>
-                <input
-                  className="form-control required"
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Ingrese su nombre"
-                  required
-                />
               </div>
               <div className="mb-3">
-                <label className="form-label" for="tel">
+                <label className="form-label">
                   Teléfono:
+                  <input
+                    className="form-control required"
+                    type="tel"
+                    id="tel"
+                    name="tel"
+                    placeholder="Ingrese su teléfono"
+                    required
+                  />
                 </label>
-                <input
-                  className="form-control required"
-                  type="tel"
-                  id="tel"
-                  name="tel"
-                  placeholder="Ingrese su teléfono"
-                  required
-                />
               </div>
               <div className="mb-3">
-                <label className="form-label" for="email">
+                <label className="form-label">
                   E-mail:
+                  <input
+                    className="form-control"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Ingrese su e-mail"
+                  />
                 </label>
-                <input
-                  className="form-control"
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  placeholder="Ingrese su e-mail"
-                />
               </div>
               <div className="mb-3">
-                <label className="form-label" for="message">
+                <label className="form-label">
                   Hacenos tu consulta:
+                  <textarea
+                    className="form-control"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    cols="50"
+                  ></textarea>
                 </label>
-                <textarea
-                  className="form-control"
-                  id="message"
-                  name="message"
-                  rows="4"
-                  cols="50"
-                ></textarea>
               </div>
               <div className="mb-3">
                 <button type="submit" className="rounded-pill btn btn-primary">

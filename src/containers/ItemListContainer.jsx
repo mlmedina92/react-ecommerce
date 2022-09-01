@@ -10,6 +10,7 @@ import {
   query,
   where,
 } from "firebase/firestore";
+import CustomLoader from "../components/CustomLoader";
 
 const ItemListContainer = () => {
   //Uso destructuración de objetos
@@ -41,11 +42,20 @@ const ItemListContainer = () => {
     }
   }, [categoriaId]); // Cada vez que categoriaId cambia vuelve a hacer el useEffect para que vuelva a hacer el pedido y se fije si existe la categoriaId y si cambió que lo filtre de nuevo.
 
-  return (
-    <>
-      <ItemList data={data} />
-    </>
-  );
+  if(data.length === 0) {
+    return (
+      <>
+        <CustomLoader />
+      </>
+    );
+  } else {
+    return (
+      <>
+        <ItemList data={data} />
+      </>
+    );
+  }
+
 };
 
 export default ItemListContainer;

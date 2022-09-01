@@ -23,7 +23,7 @@ import Bio from "./components/Bio";
 
 function App() {
   return (
-    <>
+    <div className="app-container">
       <BrowserRouter>
         {/* En las distintas rutas va a renderizar distintos componentes pero yo quiero que el navbar este siempre, no importa la ruta.Por eso no pongo el navbar en una ruta sino fuera de routes. Esas partes son dinamicas y dependiendo de la ruta q escriba es lo quiero q se renderice*/}
         {/* si no usara context este value "pablo" q esta en app lo tendria q pasar por prop a itemliscontainer-fluid desp a itemlist y desp a item , asi te salteas 2 componentes  */}
@@ -55,7 +55,7 @@ function App() {
         </footer>
         <Copyright />
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

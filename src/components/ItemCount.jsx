@@ -1,4 +1,4 @@
-// El contador sabe cual es el nro que maneja, si sube si baja . Cdo le demos clik al boton agregar al carrito ese nro tiene que ser trasladado al comp padre para que haga toda la logica de agregar al carrito, pero el contador no deberia tener nada que ver con agregar al carrito solo deberia saber su valor. El boton va a pasarle ese valor al comp padre y el comp padre simula q lo va a agregar al carrito haciendo un consolelog
+// Contador: sabe cual es el nro que maneja, si sube si baja . Cdo le demos clik al boton agregar al carrito ese nro tiene que ser trasladado al comp padre para que haga toda la logica de agregar al carrito, pero el contador no deberia tener nada que ver con agregar al carrito solo deberia saber su valor. El boton va a pasarle ese valor al comp padre y el comp padre simula q lo va a agregar al carrito haciendo un consolelog
 //para poder cambiar el numero necesitamos q persista el nro  y que lo tenga registrado el ItemCOunt. para esto necesitamos usar el hook UseState con la variable count.
 //cdo hago clik en boton + o  - se ejecuta una funcion q modifica el count que es un estado, provocamos una re renderizacion y el count ya no diria el valor inicial 1 por ej sino dos si toque el boton +.
 //setCount : cambia, setea el valor de la var count en count +1 o -1-
@@ -7,10 +7,12 @@
 //agrego useEffect para que cada vez q cambie el valor inciial por ej, se resetee y no haya q actualizarlo
 
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "../scss/itemCount.scss";
+import { useNavigate } from "react-router-dom";
 
 const ItemCount = ({ initial, stock, onAdd }) => {
+  let history = useNavigate();// Hooks para manejar historial de navegacion
+
   //destructuring de props
   const [count, setCount] = useState(parseInt(initial));
 
@@ -54,11 +56,9 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         >
           Agregar al carrito
         </button>
-        <Link to="/">
-          <button className="rounded-pill btn btn-primary col-3">
+          <button onClick={() => history(-1)} className="rounded-pill btn btn-primary col-3">
             Volver atrás
           </button>
-        </Link>
       </div>
     </div>
   );
