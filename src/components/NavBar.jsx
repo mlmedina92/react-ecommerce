@@ -4,13 +4,13 @@ import logo from "../img/logo.jpeg";
 import CartWidget from "./CartWidget";
 
 const NavBar = () => {
-  //Función para aplicar las clases nativas de react router dom para links activos
+  //Función para aplicar las clases nativas de react-router-dom para links activos
   const navLinkClassName = "nav-link";
   const navLinkClassNameActive = "nav-link active";
 
   return (
     <nav className="navbar navbar-expand-lg bg-light bg-opacity-75">
-      <div className="container">
+      <div className="">
         <NavLink className="navbar-brand" to="/">
           <img
             src={logo}

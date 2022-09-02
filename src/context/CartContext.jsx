@@ -26,16 +26,16 @@ const CartProvider = ({ children }) => {
     }
   };
 
-  const totalPrice = () => {//Saber el $ total
+  const totalPrice = () => {//$ total
     return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
   };
-  const totalProducts = () => //Saber la cantidad de productos en el carrito :
+  const totalProducts = () => //cantidad de productos en el carrito :
     cart.reduce(
       (acumulador, productoActual) => acumulador + productoActual.quantity,
       0
     );
 
-  const clearCart = () => setCart([]); //Limpiar carrito es = a setear al cart como un []
+  const clearCart = () => setCart([]); //Limpiar carrito (setear al cart como un [] )
 
   const isInCart = (id) =>
     cart.find((product) => product.id === id) ? true : false; //Ver si esta en el carrito

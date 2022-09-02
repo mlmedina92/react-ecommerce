@@ -6,8 +6,8 @@ import "../scss/title.scss";
 
 const Home = () => {
   return (
-    <div className="container">
-      <section className="container mb-5 inicio">
+    <div className="">
+      <section className="mb-5 inicio">
         {/*Paso datos por props a Title */}
         <div className="vh-100 titulo text-center">
           <Title
@@ -18,7 +18,7 @@ Siéntase libre de mirar a su alrededor."
           />
         </div>
       </section>
-      <section className="container mb-5">
+      <section className="mb-5">
         <>
           <h4 className="text-center text-uppercase mb-5">
             ¡Relájate y disfruta!

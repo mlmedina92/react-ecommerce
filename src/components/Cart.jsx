@@ -7,8 +7,8 @@ const Cart = () => {
   const { cart, totalPrice } = useCartContext();
 
   if (cart.length === 0) {
-    return ( //return condicional (IF)
-      
+    return (
+      //return condicional (if)
       <>
         <p>Aún no agregaste elementos en el carrito</p>
         <Link to="/">
@@ -19,8 +19,9 @@ const Cart = () => {
       </>
     );
   }
-  
-  return ( //return condicional (else)
+
+  return (
+    //return condicional (else)
     <>
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />

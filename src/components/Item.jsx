@@ -1,4 +1,4 @@
-//Item: card que se renderiza por c/ objeto. Cada card es clikeable, cuando toco me manda al detalle.
+//Item: card que se renderiza por c/ objeto. Cada card es clikeable, toco y me manda al detalle.
 
 import "../scss/item.scss";
 import { Link } from "react-router-dom";
@@ -13,6 +13,8 @@ const Item = ({ info }) => {//capturo info (es un objeto mapedo)
             src={info.image}
             className="img-card w-100 vh-80 img-fluid rounded-start"
             alt={info.price}
+            height=""
+            width=""
           />
         </div>
         <div className="col-md-5 card-color">

@@ -28,7 +28,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <section className="container mb-5">
+      <section className="mb-5">
         <h2 className="mb-3">Contacto</h2>
         <div className="row">
           <div className="col-12">

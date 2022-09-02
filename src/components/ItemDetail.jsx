@@ -15,13 +15,14 @@ export const ItemDetail = ({ data }) => {
   };
 
   return (
-    <div className="container mb-5">
+    <div className="mb-5">
       <div className="card">
         <img
           className="card-img-top image-detail"
           src={data.image}
           alt={data.title}
-        />
+          height=""
+          width=""        />
         <div className="card-body">
           <h4 className="card-title">{data.title}</h4>
           <p className="card-text">

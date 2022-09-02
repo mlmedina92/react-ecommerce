@@ -4,7 +4,7 @@ import "../scss/bio.scss";
 const Bio = () => {
   return (
     <>
-      <section id="nosotros" className="container-fluid py-5">
+      <section id="nosotros" className="py-5">
         <div className="row d-flex align-items-center">
           <div className="col-12 col-md-6 mb-3 mb-md-0">
             <h2 className="mb-3 text-center text-uppercase">Mundo Flotante</h2>
@@ -64,7 +64,9 @@ const Bio = () => {
               className="w-100"
               src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1661886084/mundoFlotante/si_oe6nzq.jpg"
               alt="Mundo Flotante"
-            />
+              height=""
+              weight=""
+              />
           </div>
         </div>
       </section>
