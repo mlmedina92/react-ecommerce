@@ -20,7 +20,7 @@ const Item = ({ info }) => {//capturo info (es un objeto mapedo)
         <div className="col-md-5 card-color">
           <div className="card-body">
             <h5 className="card-title">{info.title}</h5>
-            <p className="card-text">{info.descripcion}</p>
+            {/* <p className="card-text">{info.descripcion}</p> */}
             <button>
               <Link
                 to={`/detalle/${info.id}`}

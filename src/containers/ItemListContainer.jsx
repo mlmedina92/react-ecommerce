@@ -3,13 +3,7 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../components/ItemList";
 import { useParams } from "react-router-dom";//Para filtrar,escuchar los parametros de la url.
-import {
-  getFirestore,
-  collection,
-  getDocs,
-  query,
-  where,
-} from "firebase/firestore";
+import { getFirestore, collection, getDocs, query, where} from "firebase/firestore";
 import CustomLoader from "../components/CustomLoader";
 
 const ItemListContainer = () => {

@@ -1,7 +1,7 @@
+import Title from "./Title";
 import React from "react";
 import ContactForm from "./ContactForm";
 import ItemListContainer from "../containers/ItemListContainer";
-import Title from "./Title";
 import "../scss/title.scss";
 
 const Home = () => {

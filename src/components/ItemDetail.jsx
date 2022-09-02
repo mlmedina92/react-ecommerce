@@ -43,3 +43,5 @@ export const ItemDetail = ({ data }) => {
 };
 
 export default ItemDetail;
+
+//* <ItemCount initial={1} stock={5} onAdd={onAdd} />--> reever  stok x defectp?

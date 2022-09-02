@@ -1,8 +1,8 @@
-//Logica para el carrito:
-//Función para ver si hay un prod o no en el carrito
-//Función para limpiar el carrito
-//Función para remover un prod
-//Función para agregar un prod con la logica para no aceptar duplicados
+//Logica carrito. Funciones para:
+//Ver si hay un prod o no en el carrito
+//Limpiar el carrito
+//Remover un prod
+//Agregar un prod con la logica para no aceptar duplicados
 
 import React, { useState, useContext } from "react";
 const CartContext = React.createContext([]);
