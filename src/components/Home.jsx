@@ -1,6 +1,5 @@
 import Title from "./Title";
 import React from "react";
-import ContactForm from "./ContactForm";
 import ItemListContainer from "../containers/ItemListContainer";
 import "../scss/title.scss";
 
@@ -26,7 +25,6 @@ Siéntase libre de mirar a su alrededor."
         </>
         <ItemListContainer />
       </section>
-      <ContactForm />
     </div>
   );
 };

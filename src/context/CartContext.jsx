@@ -3,7 +3,7 @@
 //Limpiar el carrito
 //Remover un prod
 //Agregar un prod con la logica para no aceptar duplicados
-
+import Swal from "sweetalert2";
 import React, { useState, useContext } from "react";
 const CartContext = React.createContext([]);
 
@@ -19,10 +19,18 @@ const CartProvider = ({ children }) => {
           return product.id === item.id
             ? { ...product, quantity: product.quantity + quantity }
             : product;
+
         })
       );
     } else {
-      setCart([...cart, { ...item, quantity }]);
+      setCart([...cart, { ...item, quantity }])
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Producto añadido al carrito',
+        showConfirmButton: false,
+        timer: 1500
+      })
     }
   };
 
@@ -35,14 +43,29 @@ const CartProvider = ({ children }) => {
       0
     );
 
-  const clearCart = () => setCart([]); //Limpiar carrito (setear al cart como un [] )
+  const clearCart = () => {
+    setCart([]); //Limpiar carrito (setear al cart como un [] )
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'carrito vaciado con éxito',
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
 
   const isInCart = (id) =>
     cart.find((product) => product.id === id) ? true : false; //Ver si esta en el carrito
 
   const removeProduct = (id) => {
     setCart(cart.filter((product) => product.id !== id)); //Dejo pasar los prod que no tengan ese id forma un nuevo array
-    debugger;
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'producto eliminado',
+      showConfirmButton: false,
+      timer: 1500
+    })
   };
 
   return (

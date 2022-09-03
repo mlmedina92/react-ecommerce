@@ -18,8 +18,7 @@ const Bio = () => {
               Australia.
             </p>
             <p className="parrafo-bio">
-              Ha realizado murales por{" "}
-              <strong>Argentina, España y Australia</strong>, así como series de
+              Ha realizado murales por<strong>Argentina, España y Australia</strong>, así como series de
               pinturas con diferentes soportes que vende y expone.
             </p>
             <p className="parrafo-bio">
