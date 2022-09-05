@@ -46,11 +46,19 @@ const CartProvider = ({ children }) => {
   const clearCart = () => {
     setCart([]); //Limpiar carrito (setear al cart como un [] )
     Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'carrito vaciado con éxito',
-      showConfirmButton: false,
-      timer: 1500
+      title: 'Seguro quieres vaciar el carrito?',
+      // text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Vaciar carrito!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Carrito vaciado',
+        )
+      }
     })
   }
 
@@ -60,11 +68,18 @@ const CartProvider = ({ children }) => {
   const removeProduct = (id) => {
     setCart(cart.filter((product) => product.id !== id)); //Dejo pasar los prod que no tengan ese id forma un nuevo array
     Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'producto eliminado',
-      showConfirmButton: false,
-      timer: 1500
+      title: '¿Desea eliminar el producto? ',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Eliminar!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Producto eliminado del carrito !',
+        )
+      }
     })
   };
 

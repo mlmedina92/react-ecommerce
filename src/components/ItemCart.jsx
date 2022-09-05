@@ -4,6 +4,7 @@ import "../scss/itemCart.scss";
 
 const ItemCart = ({ product }) => {
   const { removeProduct } = useCartContext();
+  const {clearCart} =  useCartContext();
 
   return (
     <div>
@@ -21,6 +22,12 @@ const ItemCart = ({ product }) => {
           onClick={() => removeProduct(product.id)}
         >
           Eliminar producto
+        </button>
+        <button
+          className="rounded-pill btn btn-primary"
+          onClick={() => clearCart(product.id)}
+        >
+          vaciar carrito
         </button>
       </div>
     </div>

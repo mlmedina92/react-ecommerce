@@ -61,7 +61,7 @@ const NavBar = () => {
               <NavLink
                 className={navLinkClassName}
                 activeclassname={navLinkClassNameActive}
-                to="/categoria/murales"
+                to="/categoria/ilustraciones"
               >
                 Ilustraciones
               </NavLink>
