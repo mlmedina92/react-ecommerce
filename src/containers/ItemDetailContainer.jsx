@@ -6,7 +6,8 @@ import CustomLoader from "../components/CustomLoader";
 
 export const ItemDetailContainer = () => {
   const [data, setData] = useState({}); //Guardo lo que pedi. Se inicia como {}
-  const { detalleId } = useParams();
+  
+  const { detalleId } = useParams(); // uso el hook useparams capturo el detalleId esa información me llega desde la ruta creada en App 
   useEffect(() => {
     const querydb = getFirestore(); //1- Trer datos de firestore
     const queryDoc = doc(querydb, "productos", detalleId);//2- Crear puntero al dato que queremos traer

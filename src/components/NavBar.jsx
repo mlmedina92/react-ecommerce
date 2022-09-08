@@ -33,7 +33,7 @@ const NavBar = () => {
         </button>
 
         {/* Links menú pcipal */}
-
+        {/* en NavBAr reemplazo enlaces a por NavLinks y les digo con que ruta quiero q matchee cada link */}
         <div
           className="collapse navbar-collapse justify-content-end text-uppercase"
           id="navbarId"

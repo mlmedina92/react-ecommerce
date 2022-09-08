@@ -3,9 +3,7 @@ import { useCartContext } from "../context/CartContext";//Importo hook para usar
 import "../scss/itemCart.scss";
 
 const ItemCart = ({ product }) => {
-  const { removeProduct } = useCartContext();
-  const {clearCart} =  useCartContext();
-
+  const { removeProduct, clearCart } = useCartContext();
   return (
     <div>
       <img src={product.image} alt={product.title} height="" width=""/>
@@ -25,7 +23,7 @@ const ItemCart = ({ product }) => {
         </button>
         <button
           className="rounded-pill btn btn-primary"
-          onClick={() => clearCart(product.id)}
+          onClick={() => clearCart()}
         >
           vaciar carrito
         </button>
