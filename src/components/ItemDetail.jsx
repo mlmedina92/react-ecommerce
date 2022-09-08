@@ -1,7 +1,7 @@
 // en el detalle de cada producto hay un ItemCount
 
 import React, { useState } from "react";
-import { useCartContext } from "../context/CartContext";
+import { useCartContext } from "../context/CartContext"; //para usar contexto
 import ItemCount from "./ItemCount";
 import { Link } from "react-router-dom";
 import "../scss/itemDetail.scss";
@@ -35,13 +35,14 @@ export const ItemDetail = ({ data }) => {
           </p>
           <p>{data.stock}</p>
         {/* gotoCart es un estado (si vale true se renderiza un link que te lleva a carrito si es false te lleva a ItemCount) */}
+        {/* a la funcion onAdd que cree aca la paso por props al hijo */}
           {goToCart ? (
             <Link to="/carrito" className="rounded-pill btn btn-primary">
               Terminar compra
             </Link>
+            
           ) : (
             <ItemCount initial={1} stock={data.stock} onAdd={onAdd} />
-            
           )}
         </div>
       </div>

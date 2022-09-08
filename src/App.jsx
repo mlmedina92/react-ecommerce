@@ -23,6 +23,7 @@ function App() {
     <div className="app-container">
       <BrowserRouter>
         <CartProvider>
+        {/* importo CartProvider que dentro tiene el CartContext */}
         {/* envuelvo en CartProvider todo lo que lo vaya a usar, todos sus hijos pasan como props children a CartProvider que esta en CartContext . En el NavBar está el carrito */}
           <header className="sticky-top">
             <NavBar />

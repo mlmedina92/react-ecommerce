@@ -12,7 +12,7 @@ import React, { useState, useEffect } from "react";
 import "../scss/itemCount.scss";
 import { useNavigate } from "react-router-dom";
 
-const ItemCount = ({ initial, stock, onAdd }) => {//recibe una funcion x props
+const ItemCount = ({ initial, stock, onAdd }) => {//recibe funcion onAdd x props
   let history = useNavigate();// Hooks para manejar historial de navegacion
 
   //destructuring de props
@@ -49,7 +49,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {//recibe una funcion x props
           +
         </button>
 
-        {/* Clik en agregar al carrito: ejecucta func anonima, llamo a otra funcion q es onAdd pero le paso como argumento el valor del count(que seria quantity en la declaracion de la funcion ) por ej 4.  onAdd esta declarada en el padre ItemDetail y recien ahi la ejecuta - cuando hagan click en agregar el carrito lo unico q hace es pasarle al padre el valor. Cdo hago click en agrega al carrito qeremos que desaparezca el contador y aparezca un nuevo botos que nos mande al Cart*/}
+        {/* Clik en agregar al carrito: ejecucta func anonima, llamo a otra funcion q es onAdd pero le paso como argumento el valor del count(que seria quantity en la declaracion de la funcion ) por ej 4.  onAdd esta declarada en el padre ItemDetail y recien ahi la ejecuta - cuando hagan click en agregar el carrito lo unico q hace es pasarle al padre el valor(por medio de evento clik). Cdo hago click en agrega al carrito qeremos que desaparezca el contador y aparezca un nuevo botos que nos mande al Cart. ejecuta onAdd- PASO DE HIJO A PADRE LA FUNCION PERO DE HIJO A PADRE PASO EL ESTADO (COUNT)*/}
         <button
           disabled={stock <= 0} //si no hay stock
           //llamo a onAdd pero pasandole el valor del count(estado)al comp padre

@@ -1,3 +1,5 @@
+//al clikear comprar se debe guadar en el CartContext el producto y su cantida en forma de objeto {name, price, quantity} dentro del array de productos agregados
+
 import React, { useState, useEffect } from "react";
 import ItemDetail from "../components/ItemDetail";
 import { useParams } from "react-router-dom";
