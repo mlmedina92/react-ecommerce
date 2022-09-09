@@ -10,21 +10,13 @@
   --bs-body-font-family: "Montserrat", sans-serif;
 }
 
-a,
-Link {
+a {
   text-decoration: none;
   border: none;
   color: black;
   :hover {
     color: #6faeb3;
   }
-}
-
-button {
-  border: none;
-  box-shadow: none;
-  border-color: black;
-  background-color: #c6dce4;
 }
 
 html {

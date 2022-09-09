@@ -7,8 +7,8 @@ import Item from "./Item";
 const ItemList = ({ data = [] }) => {
   return (
     <>
-      <h4 className="text-center mb-5">Conoce algunas de sus obras de arte</h4>
-      <div className="row">
+      <h4 className="text-center mb-4">Conoce algunas de sus obras de arte</h4>
+      <div className="row g-3">
         {data.map((item) => {
           return (
             <div className="col-sm-12 col-lg-6">

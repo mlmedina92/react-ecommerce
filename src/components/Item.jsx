@@ -2,13 +2,14 @@
 
 import "../scss/item.scss";
 import { Link } from "react-router-dom";
-import React from "react"; 
+import React from "react";
 
-const Item = ({ info }) => {//capturo info (es un objeto mapedo)
+const Item = ({ info }) => {
+  //capturo info (es un objeto mapedo)
   return (
-    <div className="card mb-5">
-      <div className="row">
-        <div className="col-md-7 pe-0">
+    <div className="card">
+      <div className="row g-0">
+        <div className="col-md-8 pe-0">
           <img
             src={info.image}
             className="img-card w-100 vh-80 img-fluid rounded-start"
@@ -17,19 +18,17 @@ const Item = ({ info }) => {//capturo info (es un objeto mapedo)
             width=""
           />
         </div>
-        <div className="col-md-5 card-color">
+        <div className="col-md-4">
           <div className="card-body">
             <h5 className="card-title">{info.title}</h5>
             <p className="card-text">{info.descripcion}</p>
-            <button>
             {/* el enlace LInk te lleva a la ruta detalle/numero de id que es dinamico */}
-              <Link
-                to={`/detalle/${info.id}`}
-                className="rounded-pill btn btn-primary"
-              >
-                Ver detalles
-              </Link>
-            </button>
+            <Link
+              to={`/detalle/${info.id}`}
+              className="rounded-pill btn btn-primary"
+            >
+              Ver detalles
+            </Link>
           </div>
         </div>
       </div>
