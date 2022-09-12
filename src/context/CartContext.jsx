@@ -28,8 +28,7 @@ const CartProvider = ({ children }) => { //captura los hijos (props) que vienen 
     if (isInCart(item.id)) {// si esta en el carrito este item setea cart con esto.. creo un nuevo array con map
       setCart(
         cart.map((product) => {
-          return product.id === item.id
-            ? { ...product, quantity: product.quantity + quantity } //a los q sean iguales dejalos tal cual estan pero al quantity agregale la cant seleccionada
+          return product.id === item.id ? { ...product, quantity: product.quantity + quantity } //a los q sean iguales dejalos tal cual estan pero al quantity agregale la cant seleccionada
             : product; //a los q no sean iguales dejalos talcual estan
 //agrego al obejto product una prop quantity
         })
@@ -49,11 +48,8 @@ const CartProvider = ({ children }) => { //captura los hijos (props) que vienen 
   const totalPrice = () => {//$ total. valor inicial 0. cart es un array le aplico metodo reduce
     return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
   };
-  const totalProducts = () => //cantidad de productos en el carrito :
-    cart.reduce(
-      (acumulador, productoActual) => acumulador + productoActual.quantity,
-      0
-    );
+  const totalProducts = () => //cantidad de productos en el carrito : es lo qe se muestra en CartWidget
+    cart.reduce((acumulador, productoActual) => acumulador + productoActual.quantity,0);
 
   const clearCart = () => {
     Swal.fire({
@@ -74,7 +70,7 @@ const CartProvider = ({ children }) => { //captura los hijos (props) que vienen 
   }
 
   const isInCart = (id) =>
-    cart.find((product) => product.id === id) ? true : false; //Ver si un prod esta en el carrito, recibe un argumento id. Nos devuelve el objeto(true) o undefined(false)
+    cart.find((product) => product.id === id) ? true : false; //Ver si un prod esta en el carrito, recibe un argumento id. Nos devuelve(true si existe el objeto) o false(si no existe y da undefined)
 
   const removeProduct = (id) => {//recibo el id del prod a eliminar
     Swal.fire({
@@ -83,14 +79,15 @@ const CartProvider = ({ children }) => { //captura los hijos (props) que vienen 
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Eliminar!'
+      confirmButtonText: 'Eliminar'
+      
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire(
           'Producto eliminado del carrito !',
         )
       setCart(cart.filter((product) => product.id !== id)); //seteo el mismo carrito que estaba antes: dejo pasar los prod que no tengan ese id forma un nuevo array
-      }
+      }//me quedo con todos los prod q no tengan este id
     })
   };
 
@@ -102,13 +99,13 @@ const CartProvider = ({ children }) => { //captura los hijos (props) que vienen 
       value={{ //paso estos valores osea funciones con atribute value y como objetos {{}}. en el componente que los reciba tengo que usar el hook UseContext
        //no se pasa el setdata, el setcar esta interno simepre en el contexto, paso una funcion que setee el carrito y paso
       //paso funcines que setean el cart(estado)
-        clearCart: clearCart,
+        clearCart: clearCart, //funciones
         isInCart: isInCart,
         removeProduct: removeProduct,
         addProduct: addProduct,
         totalPrice: totalPrice,
         totalProducts: totalProducts,
-        cart: cart,
+        cart: cart, //estado del cart
       }}
     >
       {children} 

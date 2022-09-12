@@ -1,4 +1,4 @@
-// ItemCount: sabe cual es el nro (si sube o baja). Cdo  damos clik al boton agregar al carrito ese valor se pasa al comp padre (ItemDetail: sube información por medio de evento) para que haga la logica de agregar al carrito. 
+// ItemCount: sabe cual es el nro (si sube o baja). Cdo  damos clik al boton agregar al carrito ese valor se pasa al comp padre (ItemDetail: sube información por medio de evento) para que haga la logica de agregar al carrito.
 
 // Para cambiar el numero de ItemCount necesitamos que este persista: usamos el hook UseState con la variable count.
 
@@ -12,8 +12,9 @@ import React, { useState, useEffect } from "react";
 import "../scss/itemCount.scss";
 import { useNavigate } from "react-router-dom";
 
-const ItemCount = ({ initial, stock, onAdd }) => {//recibe funcion onAdd x props
-  let history = useNavigate();// Hooks para manejar historial de navegacion
+const ItemCount = ({ initial, stock, onAdd }) => {
+  //recibe funcion onAdd x props
+  let history = useNavigate(); // Hooks para manejar historial de navegacion
 
   //destructuring de props
   const [count, setCount] = useState(parseInt(initial));
@@ -31,36 +32,40 @@ const ItemCount = ({ initial, stock, onAdd }) => {//recibe funcion onAdd x props
   }, [initial]);
 
   return (
-    <div className="p-0 text-center">
-      <div className="row counter">
+    <div className="container-fluid">
+      <div className="row">
         <button
           disabled={count <= 1}
           onClick={decrease}
-          className="rounded-pill btn btn-primary col-1"
+          className="btn btn-primary mb-2 col-4"
         >
           -
         </button>
-        <span className="col-1">{count}</span>
+        <span className="mb-2 col-4 text-center count-num">{count}</span>
         <button
           disabled={count >= stock}
           onClick={increase}
-          className="rounded-pill btn btn-primary col-1"
+          className="btn btn-primary mb-2 col-4"
         >
           +
         </button>
+      </div>
 
-        {/* Clik en agregar al carrito: ejecucta func anonima, llamo a otra funcion q es onAdd pero le paso como argumento el valor del count(que seria quantity en la declaracion de la funcion ) por ej 4.  onAdd esta declarada en el padre ItemDetail y recien ahi la ejecuta - cuando hagan click en agregar el carrito lo unico q hace es pasarle al padre el valor(por medio de evento clik). Cdo hago click en agrega al carrito qeremos que desaparezca el contador y aparezca un nuevo botos que nos mande al Cart. ejecuta onAdd- PASO DE HIJO A PADRE LA FUNCION PERO DE HIJO A PADRE PASO EL ESTADO (COUNT)*/}
+      {/* Clik en agregar al carrito: ejecucta func anonima, llamo a otra funcion q es onAdd pero le paso como argumento el valor del count(que seria quantity en la declaracion de la funcion ) por ej 4.  onAdd esta declarada en el padre ItemDetail y recien ahi la ejecuta - cuando hagan click en agregar el carrito lo unico q hace es pasarle al padre el valor(por medio de evento clik). Cdo hago click en agrega al carrito qeremos que desaparezca el contador y aparezca un nuevo botos que nos mande al Cart. ejecuta onAdd- PASO DE HIJO A PADRE LA FUNCION PERO DE HIJO A PADRE PASO EL ESTADO (COUNT)*/}
+      <div className="row">
         <button
           disabled={stock <= 0} //si no hay stock
           //llamo a onAdd pero pasandole el valor del count(estado)al comp padre
           onClick={() => onAdd(count)}
-          className="rounded-pill btn btn-primary ms-3 col-3"
+          className=" btn btn-primary mb-2"
         >
           Agregar al carrito
         </button>
-          <button onClick={() => history(-1)} className="rounded-pill btn btn-primary col-3">
-            Volver atrás
-          </button>
+      </div>
+      <div className="row">
+        <button onClick={() => history(-1)} className=" btn btn-primary">
+          Volver atrás
+        </button>
       </div>
     </div>
   );

@@ -12,20 +12,20 @@ const Item = ({ info }) => {
         <div className="col-md-8 pe-0">
           <img
             src={info.image}
-            className="img-card w-100 vh-80 img-fluid rounded-start"
+            className="img-fluid rounded-start"
             alt={info.price}
             height=""
             width=""
           />
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 info-card">
           <div className="card-body">
             <h5 className="card-title">{info.title}</h5>
             <p className="card-text">{info.descripcion}</p>
             {/* el enlace LInk te lleva a la ruta detalle/numero de id que es dinamico */}
             <Link
               to={`/detalle/${info.id}`}
-              className="rounded-pill btn btn-primary"
+              className="btn btn-primary"
             >
               Ver detalles
             </Link>

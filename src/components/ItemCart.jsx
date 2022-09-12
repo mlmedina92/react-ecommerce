@@ -1,32 +1,34 @@
 import React from "react";
-import { useCartContext } from "../context/CartContext";//Importo hook para usar context 
-import "../scss/itemCart.scss";
+import { useCartContext } from "../context/CartContext"; //Importo hook para usar context
 
 const ItemCart = ({ product }) => {
   const { removeProduct, clearCart } = useCartContext();
   return (
-    <div>
-      <img src={product.image} alt={product.title} height="" width=""/>
-      <div>
-        <p>Obra de arte: {product.title}</p>
-        <p>Cantidad: {product.stock}</p>
-        <p>Precio unidad: {product.price}</p>
-        <p>
-          <strong>Subtototal: $</strong>
-          {product.price * product.price}
-        </p>
-        <button
-          className="rounded-pill btn btn-primary"
-          onClick={() => removeProduct(product.id)}
-        >
-          Eliminar producto
-        </button>
-        <button
-          className="rounded-pill btn btn-primary"
-          onClick={() => clearCart()}
-        >
-          vaciar carrito
-        </button>
+    <div className="card mb-3">
+      <div className="row g-0">
+        <div className="col-md-8">
+          <img src={product.image} alt={product.title} height="" width="" />
+        </div>
+        <div className="card-body col-md-4">
+          <h4 className="card-title">Obra de arte: {product.title}</h4>
+          <p className="card-text">Stock disponible: {product.stock}</p>
+          <p className="card-text">Producto adquirido: {product.quantity}</p>
+
+          <p className="card-text">Precio unidad: $ {product.price}</p>
+          <p className="card-text">
+            <strong>Subtototal: $</strong>
+            {product.price * product.quantity}
+          </p>
+          <button
+            className="btn btn-primary"
+            onClick={() => removeProduct(product.id)}
+          >
+            Eliminar producto
+          </button>
+          <button className="btn btn-primary" onClick={() => clearCart()}>
+            Vaciar carrito
+          </button>
+        </div>
       </div>
     </div>
   );

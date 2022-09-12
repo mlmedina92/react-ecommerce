@@ -19,22 +19,27 @@ export const ItemDetail = ({ data }) => {
   };
 
   return (
-    <div className="my-3">
-      <div className="card">
-        <img
-          className="card-img-top image-detail"
+    <div className="card mb-3">
+      <div className="row g-0">
+      <div className="col-md-8">
+          <img
+          className="img-fluid"
           src={data.image}
           alt={data.title}
           height=""
           width=""
         />
-        <div className="card-body">
+      </div>
+   
+        <div className="card-body col-md-4 detail-info">
           <h4 className="card-title">{data.title}</h4>
           <p className="card-text">
             <strong>$: </strong>
             {data.price}
           </p>
-          <p>{data.stock}</p>
+          <p>Stock: {data.stock}</p>
+          <p>Stock: {data.descripcion}</p>
+
           {/* gotoCart es un estado (si vale true se renderiza un link que te lleva a carrito si es false te lleva a ItemCount) */}
           {/* a la funcion onAdd que cree aca la paso por props al hijo */}
           {goToCart ? (
