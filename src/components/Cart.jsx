@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import ItemCart from "./ItemCart";
 import { useNavigate } from "react-router-dom";
 import { addDoc, collection, getFirestore } from "firebase/firestore"
+import Swal from "sweetalert2";
 
 const Cart = () => {
   const { cart, totalPrice } = useCartContext();
   let history = useNavigate(); // Hooks para manejar historial de navegacion
 
-  const order = {
+  const order = { //datos hardcodeados de oc
     buyer:{
       name:'lis',
       email:'lm30540@gmail.com',
@@ -23,9 +24,16 @@ const Cart = () => {
   const handleClick = () => {
     const db = getFirestore();
     const ordersCollection = collection(db, 'orders');
-    addDoc(ordersCollection,order)
+    addDoc(ordersCollection,order) //metodo post para agregar inf a firebase
       .then(({ id }) => console.log (id));
-  }
+      Swal.fire({
+        title: 'Su orden de compra se cargó con éxito!',
+        text: 'Gracias por ser parte de este Mundo flotante',
+        imageUrl: 'https://res.cloudinary.com/dmatgvjjy/image/upload/v1661885787/mundoFlotante/20211112_180955_2_1_mkaban.jpg',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Custom image',
+      })}
 
   if (cart.length === 0) {
     return (
@@ -54,6 +62,7 @@ const Cart = () => {
       >
         Volver atrás
       </button>
+     {/*clik  en boton-> genera oc en firebase */}
       <button className="rounded-pill btn btn-primary" onClick={handleClick}>Emitir orden </button>
     </>
   );
