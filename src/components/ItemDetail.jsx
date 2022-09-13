@@ -43,7 +43,7 @@ export const ItemDetail = ({ data }) => {
           {/* gotoCart es un estado (si vale true se renderiza un link que te lleva a carrito si es false te lleva a ItemCount) */}
           {/* a la funcion onAdd que cree aca la paso por props al hijo */}
           {goToCart ? (
-            <Link to="/carrito" className="rounded-pill btn btn-primary">
+            <Link to="/carrito" className="btn btn-primary">
               Terminar compra
             </Link>
           ) : (

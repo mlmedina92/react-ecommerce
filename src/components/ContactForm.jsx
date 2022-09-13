@@ -28,10 +28,10 @@ const ContactForm = () => {
 
   return (
     <>
-      <section className="mb-5">
-        <h2 className="mb-3">Contacto</h2>
+      <section className="container mb-5">
         <div className="row">
-          <div className="col-12">
+        <h2 className="mb-3">Contacto</h2>
+          {/* <div className=""> */}
             <form ref={form} onSubmit={formSubmit}>
               <legend className="fs-6 mb-3">
                 Gracias por su interés en el trabajo de Mundo Flotante. Complete
@@ -89,13 +89,13 @@ const ContactForm = () => {
                 </label>
               </div>
               <div className="mb-3">
-                <button type="submit" className="rounded-pill btn btn-primary">
+                <button type="submit" className="btn btn-primary">
                   Enviar
                 </button>
               </div>
             </form>
           </div>
-        </div>
+        {/* </div> */}
       </section>
     </>
   );
