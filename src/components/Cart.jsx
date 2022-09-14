@@ -12,9 +12,18 @@ const Cart = () => {
     return (
       //return condicional (if)
       <>
-        <p>Aún no agregaste elementos en el carrito</p>
-        <Link to="/" className="btn btn-primary">Ir a hacer compras
-        </Link>
+        <div className="container-fluid mb-5">
+          <div className="row">
+            <h6 className="text-center">
+              Aún no agregaste elementos en el carrito
+            </h6>
+          </div>
+          <div className="row">
+            <Link to="/" className=" text-center btn btn-primary">
+              Ir a hacer compras
+            </Link>
+          </div>
+        </div>
       </>
     );
   }
@@ -32,7 +41,7 @@ const Cart = () => {
       </button>
       {/*clik  en boton-> genera oc en firebase */}
       <Link to="/checkout" className="btn btn-primary">
-          Pagar
+        Pagar
       </Link>
     </>
   );

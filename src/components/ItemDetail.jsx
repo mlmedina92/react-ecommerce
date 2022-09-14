@@ -19,18 +19,18 @@ export const ItemDetail = ({ data }) => {
   };
 
   return (
-    <div className="card mb-3">
-      <div className="row g-0">
-      <div className="col-md-8">
+    <div className="card mb-3 container-fluid">
+      <div className="row g-0 card-img-col">
+        <div className="col-md-8">
           <img
-          className="img-fluid"
-          src={data.image}
-          alt={data.title}
-          height=""
-          width=""
-        />
-      </div>
-   
+            className="img-fluid"
+            src={data.image}
+            alt={data.title}
+            height=""
+            width=""
+          />
+        </div>
+
         <div className="card-body col-md-4 detail-info">
           <h4 className="card-title">{data.title}</h4>
           <p className="card-text">

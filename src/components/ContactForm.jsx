@@ -28,74 +28,68 @@ const ContactForm = () => {
 
   return (
     <>
-      <section className="container mb-5">
-        <div className="row">
+      <section className="container-fluid mb-5">
         <h2 className="mb-3">Contacto</h2>
-          {/* <div className=""> */}
-            <form ref={form} onSubmit={formSubmit}>
-              <legend className="fs-6 mb-3">
-                Gracias por su interés en el trabajo de Mundo Flotante. Complete
-                el formulario y nos pondremos en contacto.{" "}
-              </legend>
-              <div className="mb-3">
-                <label className="form-label">
-                  Nombre:
-                  <input
-                    className="form-control required"
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Ingrese su nombre"
-                    required
-                  />
-                </label>
-              </div>
-              <div className="mb-3">
-                <label className="form-label">
-                  Teléfono:
-                  <input
-                    className="form-control required"
-                    type="tel"
-                    id="tel"
-                    name="tel"
-                    placeholder="Ingrese su teléfono"
-                    required
-                  />
-                </label>
-              </div>
-              <div className="mb-3">
-                <label className="form-label">
-                  E-mail:
-                  <input
-                    className="form-control"
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    placeholder="Ingrese su e-mail"
-                  />
-                </label>
-              </div>
-              <div className="mb-3">
-                <label className="form-label">
-                  Hacenos tu consulta:
-                  <textarea
-                    className="form-control"
-                    id="message"
-                    name="message"
-                    rows="4"
-                    cols="50"
-                  ></textarea>
-                </label>
-              </div>
-              <div className="mb-3">
-                <button type="submit" className="btn btn-primary">
-                  Enviar
-                </button>
-              </div>
-            </form>
+        <form ref={form} onSubmit={formSubmit} className="container-fluid">
+          <legend className="fs-6 mb-3">
+            Gracias por su interés en el trabajo de Mundo Flotante. Complete el
+            formulario y nos pondremos en contacto.
+          </legend>
+          <div className="mb-3 row">
+            <label className="form-label">
+              Nombre:
+              <input
+                className="form-control required"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Ingrese su nombre"
+                required
+              />
+            </label>
           </div>
-        {/* </div> */}
+          <div className="mb-3 row">
+            <label className="form-label">
+              Teléfono:
+              <input
+                className="form-control required"
+                type="tel"
+                id="tel"
+                name="tel"
+                placeholder="Ingrese su teléfono"
+                required
+              />
+            </label>
+          </div>
+          <div className="mb-3 row">
+            <label className="form-label">
+              E-mail:
+              <input
+                className="form-control"
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Ingrese su e-mail"
+              />
+            </label>
+          </div>
+          <div className="mb-3 row">
+            <label className="form-label">
+              Hacenos tu consulta:
+              <textarea
+                className="form-control"
+                id="message"
+                name="message"
+                rows="4"
+                cols="50"
+              ></textarea>
+            </label>
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Enviar
+          </button>
+        </form>
       </section>
     </>
   );

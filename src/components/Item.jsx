@@ -7,16 +7,11 @@ import React from "react";
 const Item = ({ info }) => {
   //capturo info (es un objeto mapedo)
   return (
-    <div className="card">
+    <div className="card overflow-hidden">
       <div className="row g-0">
-        <div className="col-md-8 pe-0">
-          <img
-            src={info.image}
-            className="img-fluid rounded-start"
-            alt={info.price}
-            height=""
-            width=""
-          />
+        <div className="col-md-8 col-md-8 pe-0 card-img-col"
+        style={{backgroundImage: `url(${info.image})`}}>
+  
         </div>
         <div className="col-md-4 info-card">
           <div className="card-body">
@@ -27,7 +22,7 @@ const Item = ({ info }) => {
               to={`/detalle/${info.id}`}
               className="btn btn-primary"
             >
-              Ver detalles
+              Ver
             </Link>
           </div>
         </div>
