@@ -23,6 +23,7 @@ export const ItemDetail = ({ data }) => {
       <div className="row g-0 card-img-col">
         <div className="col-md-8">
           <img
+            loading="lazy"
             className="img-fluid"
             src={data.image}
             alt={data.title}

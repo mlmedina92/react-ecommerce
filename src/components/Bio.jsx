@@ -65,7 +65,8 @@ const Bio = () => {
               alt="Mundo Flotante"
               height=""
               weight=""
-              />
+              loading="lazy"
+             />
           </div>
         </div>
       </section>

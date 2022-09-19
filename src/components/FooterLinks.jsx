@@ -8,7 +8,8 @@ const FooterLinks = () => {
       <div className="row">
         <div className="d-none d-sm-block col-12 col-md-3">
           <NavLink className="text-decoration-none" to="/">
-            <img src={logo} alt="Ecomerce" width="200" height="200" />
+            <img src={logo} alt="Ecomerce" width="200" height="200"                       loading="lazy"
+            />
           </NavLink>
         </div>
         <div className="col-12 col-md-3 mb-3">

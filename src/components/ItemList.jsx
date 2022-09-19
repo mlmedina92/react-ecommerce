@@ -7,7 +7,7 @@ import Item from "./Item";
 const ItemList = ({ data = [] }) => {
   return (
     <>
-      <h4 className="text-center mb-4 ">Conoce algunas de sus obras de arte</h4>
+      <h4 className="text-center my-4 ">Conoce algunas de sus obras de arte</h4>
       <div className="row g-3">
         {data.map((item) => {
           return (

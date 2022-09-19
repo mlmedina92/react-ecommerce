@@ -11,7 +11,9 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-light bg-opacity-75 container-fluid px-3">
       <NavLink className="navbar-brand" to="/">
-        <img src={logo} alt="logo de mundo flotante" width="100" height="100" />
+        <img src={logo} alt="logo de mundo flotante" width="100" height="100"
+        loading="lazy"
+ />
       </NavLink>
       {/* menu mobile */}
       <button
