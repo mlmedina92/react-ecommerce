@@ -20,6 +20,7 @@ import FormOc from "./components/FormOc";
 
 
 function App() {
+  console.log(process.env)
   return (
     <div className="app-container">
       <BrowserRouter>

@@ -5,18 +5,14 @@ import "../scss/itemCart.scss";
 const ItemCart = ({ product }) => {
   const { removeProduct, clearCart } = useCartContext();
   return (
-    <div className="card mb-3 mt-5">
+    <div className="card mb-3 mt-5 container">
       <div className="row g-0">
-        <div className="col-md-8 card-img-col" style={{backgroundImage: `url(${product.image})`}}>
-          {/* <img
-            className="img-fluid"
-            src={product.image}
-            alt={product.title}
-            height=""
-            width=""
-          /> */}
+        <div
+          className="col-md-8 col-sm-12 card-img-col"
+          style={{backgroundImage: `url(${product.image})`}}
+          >
         </div>
-        <div className="card-body col-md-4">
+        <div className="card-body col-md-4 col-sm-12">
           <h4 className="card-title">Obra de arte: {product.title}</h4>
           <p className="card-text">Stock disponible: {product.stock}</p>
           <p className="card-text">Producto adquirido: {product.quantity}</p>

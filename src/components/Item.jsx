@@ -11,7 +11,6 @@ const Item = ({ info }) => {
       <div className="row g-0">
         <div className="col-md-8 col-md-8 pe-0 card-img-col"
         style={{backgroundImage: `url(${info.image})`}}>
-  
         </div>
         <div className="col-md-4 info-card">
           <div className="card-body">
