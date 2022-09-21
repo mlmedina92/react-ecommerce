@@ -2,8 +2,6 @@ import React from "react";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-// to do: configurar form de contacto para el mail de MF
-
 const ContactForm = () => {
   const form = useRef();
 

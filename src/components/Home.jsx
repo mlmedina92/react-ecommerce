@@ -7,7 +7,6 @@ const Home = () => {
   return (
     <>
       <section className="mb-5 inicio">
-        {/*Paso datos por props a Title */}
         <div className="vh-100 titulo text-center">
           <Title
             title="Bienvenidos"

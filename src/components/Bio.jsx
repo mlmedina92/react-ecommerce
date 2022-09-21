@@ -18,7 +18,8 @@ const Bio = () => {
               Australia.
             </p>
             <p className="parrafo-bio">
-              Ha realizado murales por<strong>Argentina, España y Australia</strong>, así como series de
+              Ha realizado murales por
+              <strong>Argentina, España y Australia</strong>, así como series de
               pinturas con diferentes soportes que vende y expone.
             </p>
             <p className="parrafo-bio">
@@ -52,7 +53,7 @@ const Bio = () => {
               arte mientras conozco la <strong>diversidad cultural</strong> de
               este planeta.
             </p>
-            <p className="">
+            <p>
               <i class="bi bi-brush"></i> Aumentar mi conocimiento sobre los{" "}
               <strong>pueblos indígenas</strong> de todo el mundo y poder
               trabajar para la preservación de su cultura y tradiciones.
@@ -66,7 +67,7 @@ const Bio = () => {
               height=""
               weight=""
               loading="lazy"
-             />
+            />
           </div>
         </div>
       </section>

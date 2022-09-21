@@ -6,7 +6,6 @@ import { useCartContext } from "../context/CartContext";
 
 const FormOc = () => {
   const { cart, totalPrice } = useCartContext();
-  //const [datosorm, setDatosForm] = useState(initialState);
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [phone, setPhone] = useState("");
@@ -21,9 +20,7 @@ const FormOc = () => {
     //console.log(event.target.elements.apellido.value);
     //console.dir(event.target);
     //enviar la info a la base de datos
-    debugger;
     const order = {
-      //datos hardcodeados de oc
       buyer: {
         name: nombre,
         apellido: apellido,
@@ -42,8 +39,7 @@ const FormOc = () => {
 
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
-    addDoc(ordersCollection, order) //metodo post para agregar inf a firebase
-      .then(({ id }) => console.log(id));
+    addDoc(ordersCollection, order).then(({ id }) => console.log(id));
     Swal.fire({
       title: "Su orden de compra se cargó con éxito!",
       text: "Gracias por ser parte de este Mundo flotante",
