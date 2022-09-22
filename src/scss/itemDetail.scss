@@ -3,5 +3,11 @@
 }
 
 .card-img-col {
-  background-size: cover;
+  position: relative;
+
+  .lupa {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 }

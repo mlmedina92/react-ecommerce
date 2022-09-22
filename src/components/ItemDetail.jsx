@@ -15,18 +15,51 @@ export const ItemDetail = ({ data }) => {
 
   return (
     <div className="card mb-3 container-fluid">
-      <div className="row g-0 card-img-col">
-        <div className="col-md-8">
-          <img
-            loading="lazy"
-            className="img-fluid"
-            src={data.image}
-            alt={data.title}
-            height=""
-            width=""
-          />
-        </div>
+      <div className="row g-0">
+        <div
+          className="col-md-8 card-img-col"
+          style={{ backgroundImage: `url(${data.image})` }}
+        >
+          {/*  Button trigger modal */}
+          <button
+            type="button"
+            className="btn btn-primary m-3 lupa"
+            data-bs-toggle="modal"
+            data-bs-target="#verImagen"
+          >
+            <i class="bi bi-search"></i>
+          </button>
 
+          {/* Modal */}
+          <div
+            className="modal fade"
+            id="verImagen"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <button
+                    type="button"
+                    className="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div className="modal-body">
+                  <img
+                    src={data.image}
+                    alt={data.title}
+                    className="img-fluid"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Modal */}
+        </div>
         <div className="card-body col-md-4 detail-info">
           <h4 className="card-title">{data.title}</h4>
           <p className="card-text">

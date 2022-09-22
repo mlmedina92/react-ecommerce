@@ -5,7 +5,7 @@ import ItemCart from "./ItemCart";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, totalPrice } = useCartContext();
+  const { cart, totalPrice, clearCart } = useCartContext();
   let history = useNavigate();
 
   if (cart.length === 0) {
@@ -32,13 +32,22 @@ const Cart = () => {
       {cart.map((product) => (
         <ItemCart key={product.id} product={product} />
       ))}
-      <p>total de la compra: $ {totalPrice()}</p>
-      <button onClick={() => history(-1)} className="btn btn-primary col-3">
-        Volver atrás
-      </button>
-      <Link to="/checkout" className="btn btn-primary">
-        Pagar
-      </Link>
+
+      <div className="row">
+        <button onClick={() => history(-1)} className="btn btn-primary col-3">
+          Volver atrás
+        </button>
+        <button className="btn btn-primary" onClick={() => clearCart()}>
+          Vaciar carrito
+        </button>
+      </div>
+
+      <div className="row">
+        <p>total de la compra: $ {totalPrice()}</p>
+        <Link to="/checkout" className="btn btn-primary">
+          Pagar
+        </Link>
+      </div>
     </>
   );
 };

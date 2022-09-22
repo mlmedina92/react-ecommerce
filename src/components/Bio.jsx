@@ -8,14 +8,9 @@ const Bio = () => {
         <div className="row d-flex align-items-center">
           <div className="col-12 col-md-6 mb-3 mb-md-0">
             <h2 className="mb-3 text-center text-uppercase">Mundo Flotante</h2>
+            <p className="parrafo-bio">Es una Muralista Argentina y conservadora del Patrimonio Cultural.</p>
             <p className="parrafo-bio">
-              {" "}
-              Es una Muralista Argentina y conservadora del Patrimonio Cultural.
-            </p>
-            <p className="parrafo-bio">
-              Se graduó como <strong>profesora auxiliar en ilustración</strong>{" "}
-              y luego obtuvo su título en <strong>conservación</strong> en
-              Australia.
+              Se graduó como <strong>profesora auxiliar en ilustración</strong> y luego obtuvo su título en <strong>conservación</strong> en Australia.
             </p>
             <p className="parrafo-bio">
               Ha realizado murales por

@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Mundo Flotante
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](../imgs/pluma.png) 
 
-## Available Scripts
 
-In the project directory, you can run:
+El proyecto es bastante sencillo, se trata de un carrito de compras donde el usuario puede  seleccionar productos divididos en 2 categorías: Cuadros o ilustraciones digitales . Tenemos también una pagina de contacto y una con la biografía de la artista. 
+Mundo Flotante es un proyecto creado para la artista plástica Paula Pipo, con el fin de mostrar su arte y generar un medio de contacto para potenciales clientes brindandoles a los mismos un carrito de compras donde puedan simular la compra de alguno de sus productos(cuadros o ilustraciones digitales). El trabajo se desarrolló como proyecto final en la cursada de Coder House del curso de React durante agosto y septiembre del año 2022 con el objetivo de ampliar su alcance al área de backend cuando adquiera dichos conocimientos.
 
-### `npm start`
+## Authors
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [@LisMedina](https://www.github.com/octokatherine)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Construido con: React - La librería más utilizada JSX, JS y HTML. 
+Librerías utilizadas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+-[Firebase] (https://firebase.google.com/):
+Para la creación de una base de datos alojada en la nube.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-[Emailjs Browser] (https://www.emailjs.com/): 
+Para para enviar emails desde el sito web a traves de un formulario   
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-[Bootstrap Icons] (https://icons.getbootstrap.com/):
+Para utilizar iconos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-[React Router Dom]:(https://www.npmjs.com/package/react-router-dom):
+Para poder realizar la navegacion entre componentes ya que con create react app no viene esta funcionalidad
 
-### `npm run eject`
+-[SASS] (https://sass-lang.com/) : 
+Utilizada para crear hojas de estilo por sus ventajas sobre css puro. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Pasos para levantar el proyecto localmente:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+git clone https://github.com/mlmedina92/react-ecommerce
+npm install
+npm start
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Agradecimientos  
+A mi profesor en CoderHouse y mi tutor del curso, quienes me guiaron y asesoraron para lograr este proyecto aprendiendo mucho en el camino-
+Eric Wajnrajch- Profesor del curso React JS - CoderHouse
+Anthony Moreno- Tutor del curso.

@@ -1,6 +1,6 @@
-import React from "react";
-import loaderImg from "../img/loader.gif";
-import "../scss/loader.scss";
+import React from 'react';
+import loaderImg from '../img/loader.gif';
+import '../scss/loader.scss';
 
 const CustomLoader = () => {
   return (
