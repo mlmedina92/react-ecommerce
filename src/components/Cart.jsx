@@ -3,6 +3,7 @@ import { useCartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import ItemCart from "./ItemCart";
 import { useNavigate } from "react-router-dom";
+import "../scss/cart.scss";
 
 const Cart = () => {
   const { cart, totalPrice, clearCart } = useCartContext();
@@ -11,16 +12,18 @@ const Cart = () => {
   if (cart.length === 0) {
     return (
       <>
-        <div className="container-fluid mb-5">
+        <div className="container-fluid my-5">
           <div className="row">
-            <h6 className="text-center">
-              Aún no agregaste elementos en el carrito
-            </h6>
-          </div>
-          <div className="row">
-            <Link to="/" className=" text-center btn btn-primary">
-              Ir a hacer compras
-            </Link>
+            <div className="col-12 col-md-6 mb-3">
+              <h4>
+                Aún no agregaste elementos en el carrito
+              </h4>
+            </div>
+            <div className="col-12 col-md-6">
+              <Link to="/" className="btn btn-primary">
+                Ir a hacer compras
+              </Link>
+            </div>
           </div>
         </div>
       </>
@@ -29,24 +32,56 @@ const Cart = () => {
 
   return (
     <>
-      {cart.map((product) => (
-        <ItemCart key={product.id} product={product} />
-      ))}
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-md-8">
+            {cart.map((product) => (
+              <ItemCart key={product.id} product={product} />
+            ))}
+          </div>
+          <div className="col-12 col-md-4 ">
+            <div className="container">
+              <div className="row">
+                <div className="card">
+                  <div class="card-body container">
+                    <h5 class="card-title text-center text-uppercase">
+                      Resumen de compra
+                    </h5>
+                    <div className="row">
+                      <div className="col-12 col-md-6 mb-2 mb-md-3">
+                        <button
+                          onClick={() => history(-1)}
+                          className="btn btn-primary"
+                        >
+                          <i class="bi bi-arrow-left-circle-fill"></i>
+                        </button>
+                      </div>
+                      <div className="col-12 col-md-6 mb-2 mb-md-3">
+                        <button
+                          className="btn btn-primary"
+                          onClick={() => clearCart()}
+                        >
+                          Vaciar carrito
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <h6 className="text-uppercase mb-2 mb-md-3">
+                        Total: $ {totalPrice()}
+                      </h6>
+                    </div>
 
-      <div className="row">
-        <button onClick={() => history(-1)} className="btn btn-primary col-3">
-          Volver atrás
-        </button>
-        <button className="btn btn-primary" onClick={() => clearCart()}>
-          Vaciar carrito
-        </button>
-      </div>
-
-      <div className="row">
-        <p>total de la compra: $ {totalPrice()}</p>
-        <Link to="/checkout" className="btn btn-primary">
-          Pagar
-        </Link>
+                    <div className="col-12">
+                      <Link to="/checkout" className="btn btn-primary">
+                        Pagar
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

@@ -5,32 +5,44 @@ import "../scss/itemCart.scss";
 const ItemCart = ({ product }) => {
   const { removeProduct } = useCartContext();
   return (
-    <div className="container card mb-3 mt-5">
-      <div className="row g-0">
-        <div
-          className="col-md-8 card-img-col"
-          style={{ backgroundImage: `url(${product.image})` }}
-        ></div>
-        <div className="card-body col-md-4 col-sm-12">
-          <h4 className="card-title">Obra de arte: {product.title}</h4>
-          <p className="card-text">Stock disponible: {product.stock}</p>
-          <p className="card-text">Producto adquirido: {product.quantity}</p>
-          <p className="card-text">Precio unidad: $ {product.price}</p>
-          <p className="card-text">
-            <strong>Subtototal: $</strong>
-            {product.price * product.quantity}
-          </p>
-          <div className="row">
-            <button
-              className="btn btn-primary"
-              onClick={() => removeProduct(product.id)}
-            >
-              Eliminar producto
-            </button>
+    <>
+      <div className="container card mb-4">
+        <div className="row g-0">
+          <div
+            className="col-12 col-md-4 card-img-col"
+            style={{ backgroundImage: `url(${product.image})` }}
+          ></div>
+          <div className="card-body col-12 col-md-8">
+            <p className="card-title">{product.title}</p>
+            <div className="container">
+              <div className="row">
+                <div className="col-3">
+                  <p>Cantidad:</p>
+                  <p>{product.quantity}</p>
+                </div>
+                <div className="col-3">
+                  <p>Precio unidad: $ </p>
+                  <p>{product.price}</p>
+                </div>
+                <div className="col-3">
+                  <p>Subtototal: $</p>
+                  <p>{product.price * product.quantity}</p>
+                </div>
+                <div className="col-3">
+                  <button
+                    className="btn btn-primary"
+                    onClick={() => removeProduct(product.id)}
+                  >
+                    <i class="bi bi-trash3-fill"></i>{" "}
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div></div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
