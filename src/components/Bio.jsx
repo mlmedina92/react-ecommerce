@@ -62,8 +62,6 @@ const Bio = () => {
               className="w-100"
               src="https://res.cloudinary.com/dmatgvjjy/image/upload/v1661886084/mundoFlotante/si_oe6nzq.jpg"
               alt="Mundo Flotante"
-              height=""
-              weight=""
               loading="lazy"
             />
           </div>

@@ -13,8 +13,6 @@ const NavBar = () => {
         <img
           src={logo}
           alt="logo de mundo flotante"
-          width="100"
-          height="100"
           loading="lazy"
         />
       </NavLink>
@@ -51,6 +49,15 @@ const NavBar = () => {
               to="/categoria/cuadros"
             >
               Cuadros
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              className={navLinkClassName}
+              activeclassname={navLinkClassNameActive}
+              to="/categoria/murales"
+            >
+              Murales
             </NavLink>
           </li>
           <li className="nav-item">
