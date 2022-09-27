@@ -14,6 +14,8 @@ const NavBar = () => {
           src={logo}
           alt="logo de mundo flotante"
           loading="lazy"
+          height="100"
+          widtg="100"
         />
       </NavLink>
       <button

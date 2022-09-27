@@ -6,10 +6,10 @@ const ItemList = ({ data = [] }) => {
     <>
       <h4 className="text-center my-4 ">Conoce algunas de sus obras de arte</h4>
       <div className="row g-3">
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
-            <div className="col-sm-12 col-md-6 col-xl-4">
-              <Item key={item.id} info={item} />
+            <div key={index} className="col-sm-12 col-md-6 col-xl-4">
+              <Item info={item} />
             </div>
           );
         })}
