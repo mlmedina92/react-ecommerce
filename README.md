@@ -39,6 +39,7 @@ Utilizada para crear hojas de estilo por sus ventajas sobre css puro.
 
 git clone https://github.com/mlmedina92/react-ecommerce
 npm install
+cd practica
 npm start
 
 ## Agradecimientos  
@@ -84,6 +85,7 @@ Used to create style sheets for its advantages over pure css.
 
 git clone https://github.com/mlmedina92/react-ecommerce
 npm install
+cd practica
 npm start
 
 ## Thanks
